@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pools Etc — New Employee Training Portal</title>
+  <meta name="description" content="Complete your new-hire onboarding training for Pools Etc. Six interactive modules covering compliance, pool care, service procedures, water chemistry, equipment, and customer service." />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/print.css" />
+
+  <style>
+    /* Dashboard-specific styles */
+    body {
+      background: var(--color-bg);
+    }
+
+    .page-wrapper--dashboard {
+      min-height: 100vh;
+      padding-top: 0;
+      padding-bottom: var(--space-12);
+    }
+
+    /* Module grid */
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-5);
+      margin-bottom: var(--space-8);
+    }
+
+    @media (max-width: 640px) {
+      .module-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Module color accents */
+    .module-card[data-module="1"] .module-card__accent { background: var(--module-1); }
+    .module-card[data-module="2"] .module-card__accent { background: var(--module-2); }
+    .module-card[data-module="3"] .module-card__accent { background: var(--module-3); }
+    .module-card[data-module="4"] .module-card__accent { background: var(--module-4); }
+    .module-card[data-module="5"] .module-card__accent { background: var(--module-5); }
+    .module-card[data-module="6"] .module-card__accent { background: var(--module-6); }
+
+    .module-card[data-module="1"] .module-badge { background: var(--module-1); }
+    .module-card[data-module="2"] .module-badge { background: var(--module-2); }
+    .module-card[data-module="3"] .module-badge { background: var(--module-3); }
+    .module-card[data-module="4"] .module-badge { background: var(--module-4); }
+    .module-card[data-module="5"] .module-badge { background: var(--module-5); }
+    .module-card[data-module="6"] .module-badge { background: var(--module-6); }
+
+    /* Completion banner */
+    .all-done-banner {
+      display: none;
+      text-align: center;
+      padding: var(--space-8) var(--space-6);
+      background: linear-gradient(135deg, var(--color-success-light), #e0f2fe);
+      border: 1px solid rgba(45,155,90,0.2);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-8);
+    }
+
+    .all-done-banner.visible { display: block; }
+
+    /* Dashboard footer */
+    .dashboard-footer {
+      text-align: center;
+      padding: var(--space-4) 0;
+      border-top: 1px solid var(--border-color);
+      margin-top: var(--space-8);
+    }
+
+    .dashboard-footer a {
+      font-size: var(--text-xs);
+      color: var(--color-locked);
+      text-decoration: none;
+    }
+
+    .dashboard-footer a:hover {
+      color: var(--color-danger);
+      text-decoration: underline;
+    }
+
+    .dashboard-footer__version {
+      font-size: var(--text-xs);
+      color: var(--color-locked);
+      margin-top: var(--space-2);
+    }
+
+    /* Quick nav fixed header (minimal, not full module nav) */
+    .site-nav {
+      background: white;
+      border-bottom: 1px solid var(--border-color);
+      padding: 0 var(--space-6);
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .site-nav__logo {
+      font-weight: 700;
+      font-size: var(--text-lg);
+      color: var(--color-primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .site-nav__logo:hover { text-decoration: none; }
+
+    .site-nav__tagline {
+      font-size: var(--text-xs);
+      color: var(--color-locked);
+    }
+
+    @media (max-width: 480px) {
+      .site-nav__tagline { display: none; }
+    }
+
+    /* Staggered card entrance animation */
+    .module-card {
+      opacity: 0;
+      animation: fade-in-up 0.4s ease both;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site nav -->
+  <nav class="site-nav" role="navigation" aria-label="Site">
+    <a href="index.html" class="site-nav__logo">🏊 Pools Etc</a>
+    <span class="site-nav__tagline">New Employee Training Portal</span>
+  </nav>
+
+  <div class="page-wrapper--dashboard">
+
+    <!-- Dashboard hero header -->
+    <header class="dashboard-header">
+      <div class="dashboard-header__inner">
+        <div class="dashboard-logo">
+          <div class="dashboard-logo__mark" aria-hidden="true">🏊</div>
+          <span class="dashboard-logo__text">Pools Etc</span>
+        </div>
+        <p class="dashboard-tagline">New Employee Training Portal — Welcome aboard!</p>
+
+        <div class="dashboard-progress" aria-label="Overall training progress">
+          <div class="dashboard-progress__label">
+            <span>Your progress</span>
+            <strong id="progress-label">0 of 6 modules complete</strong>
+          </div>
+          <div class="progress-bar-wrap progress-lg" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="overall-progress-bar">
+            <div class="progress-bar-fill" id="overall-progress-fill"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+
+      <!-- Completion banner — shown only when all modules are done -->
+      <div class="all-done-banner" id="all-done-banner" role="alert">
+        <span style="font-size: 48px; display: block; margin-bottom: var(--space-3);">🎉</span>
+        <h2 style="color: var(--color-success);">Training Complete!</h2>
+        <p style="max-width: none; color: var(--color-body);">You've completed all 6 modules. Take the final assessment to earn your completion certificate.</p>
+        <a href="final-quiz.html" class="btn btn-primary btn-lg" style="margin-top: var(--space-4);">Take Final Assessment →</a>
+      </div>
+
+      <!-- Module cards grid -->
+      <div class="module-grid" id="module-grid" aria-label="Training modules">
+
+        <!-- Module 1 -->
+        <div class="module-card" data-module="1" style="animation-delay: 0.05s">
+          <div class="module-card__accent"></div>
+          <div class="module-card__body">
+            <div class="module-card__header">
+              <div class="module-badge" aria-hidden="true">1</div>
+              <div>
+                <div class="module-card__title">Compliance &amp; Workplace Safety</div>
+                <div class="module-card__meta">
+                  <span>⏱ 2.25 hrs</span>
+                  <span id="m1-status-badge"></span>
+                </div>
+              </div>
+            </div>
+            <p class="module-card__description">Mandatory CA harassment prevention training, OSHA heat illness awareness, and defensive driving skills for field work.</p>
+            <div class="module-card__footer">
+              <span class="module-card__score" id="m1-score" style="display:none"></span>
+              <a href="modules/module-1.html" class="btn btn-primary btn-sm" id="m1-btn">Start Module →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="module-card" data-module="2" style="animation-delay: 0.1s">
+          <div class="module-card__accent"></div>
+          <div class="module-card__body">
+            <div class="module-card__header">
+              <div class="module-badge" aria-hidden="true">2</div>
+              <div>
+                <div class="module-card__title">Pool Fundamentals</div>
+                <div class="module-card__meta">
+                  <span>⏱ 1.1 hrs</span>
+                  <span id="m2-status-badge"></span>
+                </div>
+              </div>
+            </div>
+            <p class="module-card__description">The three elements of pool care, equipment overview, and the critical chemistry ranges every tech must know.</p>
+            <div class="module-card__footer">
+              <span class="module-card__score" id="m2-score" style="display:none"></span>
+              <a href="modules/module-2.html" class="btn btn-primary btn-sm" id="m2-btn">Start Module →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="module-card" data-module="3" style="animation-delay: 0.15s">
+          <div class="module-card__accent"></div>
+          <div class="module-card__body">
+            <div class="module-card__header">
+              <div class="module-badge" aria-hidden="true">3</div>
+              <div>
+                <div class="module-card__title">Weekly Service Procedures</div>
+                <div class="module-card__meta">
+                  <span>⏱ 4.5 hrs</span>
+                  <span id="m3-status-badge"></span>
+                </div>
+              </div>
+            </div>
+            <p class="module-card__description">Master the correct order of every weekly service visit — from arrival scan to chemical add — plus skimming, brushing, and vacuuming technique.</p>
+            <div class="module-card__footer">
+              <span class="module-card__score" id="m3-score" style="display:none"></span>
+              <a href="modules/module-3.html" class="btn btn-primary btn-sm" id="m3-btn">Start Module →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="module-card" data-module="4" style="animation-delay: 0.2s">
+          <div class="module-card__accent"></div>
+          <div class="module-card__body">
+            <div class="module-card__header">
+              <div class="module-badge" aria-hidden="true">4</div>
+              <div>
+                <div class="module-card__title">Water Chemistry Deep Dive</div>
+                <div class="module-card__meta">
+                  <span>⏱ 2 hrs</span>
+                  <span id="m4-status-badge"></span>
+                </div>
+              </div>
+            </div>
+            <p class="module-card__description">CYA, alkalinity, phosphates, chemical dosing calculations, and the most common (and dangerous) mistakes to avoid.</p>
+            <div class="module-card__footer">
+              <span class="module-card__score" id="m4-score" style="display:none"></span>
+              <a href="modules/module-4.html" class="btn btn-primary btn-sm" id="m4-btn">Start Module →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="module-card" data-module="5" style="animation-delay: 0.25s">
+          <div class="module-card__accent"></div>
+          <div class="module-card__body">
+            <div class="module-card__header">
+              <div class="module-badge" aria-hidden="true">5</div>
+              <div>
+                <div class="module-card__title">Equipment &amp; Filtration</div>
+                <div class="module-card__meta">
+                  <span>⏱ 2.5 hrs</span>
+                  <span id="m5-status-badge"></span>
+                </div>
+              </div>
+            </div>
+            <p class="module-card__description">How to read a pressure gauge, when and how to backwash, pump runtime guidelines, and identifying every component on an equipment pad.</p>
+            <div class="module-card__footer">
+              <span class="module-card__score" id="m5-score" style="display:none"></span>
+              <a href="modules/module-5.html" class="btn btn-primary btn-sm" id="m5-btn">Start Module →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 6 -->
+        <div class="module-card" data-module="6" style="animation-delay: 0.3s">
+          <div class="module-card__accent"></div>
+          <div class="module-card__body">
+            <div class="module-card__header">
+              <div class="module-badge" aria-hidden="true">6</div>
+              <div>
+                <div class="module-card__title">Customer Service Excellence</div>
+                <div class="module-card__meta">
+                  <span>⏱ 2 hrs</span>
+                  <span id="m6-status-badge"></span>
+                </div>
+              </div>
+            </div>
+            <p class="module-card__description">Make great first impressions, handle complaints with confidence, and build the kind of customer loyalty that turns clients into raving fans.</p>
+            <div class="module-card__footer">
+              <span class="module-card__score" id="m6-score" style="display:none"></span>
+              <a href="modules/module-6.html" class="btn btn-primary btn-sm" id="m6-btn">Start Module →</a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /module-grid -->
+
+      <!-- Final assessment card (locked until all modules complete) -->
+      <div class="card" id="final-quiz-card" style="margin-bottom: var(--space-8);">
+        <div class="card-body" style="display:flex; align-items:center; gap: var(--space-5);">
+          <div style="font-size: 40px; flex-shrink:0;">📋</div>
+          <div style="flex:1;">
+            <h3 style="margin-bottom: var(--space-1);">Final Assessment</h3>
+            <p style="margin:0; font-size: var(--text-sm); color: var(--color-body);">25-question comprehensive test covering all 6 modules. Complete all modules first to unlock.</p>
+          </div>
+          <div>
+            <a href="final-quiz.html" class="btn btn-secondary btn-sm" id="final-btn" disabled>🔒 Locked</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="dashboard-footer">
+        <button onclick="Progress.reset()" class="btn btn-ghost btn-sm" style="font-size: var(--text-xs); color: var(--color-locked);">
+          Reset Training Progress
+        </button>
+        <div class="dashboard-footer__version">Pools Etc Training Portal v1.0</div>
+      </footer>
+
+    </main>
+  </div><!-- /page-wrapper -->
+
+  <!-- Scripts -->
+  <script src="assets/js/progress.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize progress tracker
+      Progress.init();
+
+      // Get dashboard data
+      const data = Progress.getDashboardData();
+      const completedCount = Progress.getCompletedCount();
+      const overallPct = Progress.getOverallPercent();
+
+      // Update overall progress bar
+      const fill = document.getElementById('overall-progress-fill');
+      const label = document.getElementById('progress-label');
+      const bar   = document.getElementById('overall-progress-bar');
+
+      if (fill && label && bar) {
+        // Animate after brief delay for visual impact
+        setTimeout(function () {
+          fill.style.width = overallPct + '%';
+          bar.setAttribute('aria-valuenow', overallPct);
+        }, 300);
+        label.textContent = completedCount + ' of 6 modules complete';
+      }
+
+      // Update each module card
+      var moduleNums = [1, 2, 3, 4, 5, 6];
+      moduleNums.forEach(function (num) {
+        var moduleId = 'module' + num;
+        var modData  = data.find(function (d) { return d.moduleId === moduleId; });
+        if (!modData) return;
+
+        var card      = document.querySelector('.module-card[data-module="' + num + '"]');
+        var statusBadge = document.getElementById('m' + num + '-status-badge');
+        var scoreEl   = document.getElementById('m' + num + '-score');
+        var btn       = document.getElementById('m' + num + '-btn');
+
+        if (!card) return;
+
+        if (modData.locked) {
+          // Locked state
+          card.classList.add('is-locked');
+          if (statusBadge) statusBadge.outerHTML = '<span class="badge badge-gray" id="m' + num + '-status-badge">🔒 Locked</span>';
+          if (btn) {
+            btn.classList.remove('btn-primary');
+            btn.classList.add('btn-locked');
+            btn.setAttribute('disabled', 'true');
+            btn.setAttribute('aria-disabled', 'true');
+            btn.removeAttribute('href');
+            btn.textContent = '🔒 Locked';
+          }
+          // Add lock overlay
+          var overlay = document.createElement('div');
+          overlay.className = 'module-lock-overlay';
+          overlay.innerHTML = '<svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>';
+          card.appendChild(overlay);
+
+        } else if (modData.completed) {
+          // Completed state
+          if (statusBadge) statusBadge.outerHTML = '<span class="badge badge-green" id="m' + num + '-status-badge">✓ Complete</span>';
+          if (btn) {
+            btn.textContent = 'Review →';
+          }
+          if (scoreEl && modData.score !== null) {
+            scoreEl.textContent = 'Quiz: ' + modData.score + '/10';
+            scoreEl.style.display = 'inline-flex';
+          }
+
+        } else {
+          // Unlocked but not started/in-progress
+          if (statusBadge) statusBadge.outerHTML = '<span class="badge badge-blue" id="m' + num + '-status-badge">Not Started</span>';
+          if (btn) {
+            btn.textContent = 'Start Module →';
+          }
+        }
+      });
+
+      // Check if all modules are done
+      if (Progress.getCompletedCount() === 6) {
+        var banner = document.getElementById('all-done-banner');
+        if (banner) banner.classList.add('visible');
+        // Unlock final quiz button
+        var finalBtn = document.getElementById('final-btn');
+        if (finalBtn) {
+          finalBtn.removeAttribute('disabled');
+          finalBtn.textContent = 'Take Final Assessment →';
+          finalBtn.classList.remove('btn-secondary');
+          finalBtn.classList.add('btn-primary');
+          finalBtn.setAttribute('href', 'final-quiz.html');
+        }
+      }
+
+      // Check final quiz status
+      var finalStatus = Progress.getStatus('finalQuiz');
+      if (finalStatus && finalStatus.passed) {
+        var finalBtn = document.getElementById('final-btn');
+        if (finalBtn) {
+          finalBtn.textContent = '✓ Passed — Review';
+          finalBtn.classList.add('btn-success');
+        }
+      }
+
+    });
+  </script>
+
+</body>
+</html>
