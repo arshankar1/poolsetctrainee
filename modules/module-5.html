@@ -184,14 +184,14 @@
     </div>
 
     <!-- Interactive: Equipment Diagram -->
-    <div class="interactive-section" style="margin-bottom:var(--space-8);">
+    <div class="interactive-section" id="m5-diagram" style="margin-bottom:var(--space-8);">
       <div class="interactive-section__title">🗺️ Clickable Equipment Pad</div>
       <div class="interactive-section__subtitle">Click each numbered hotspot to learn about that component.</div>
       <div id="equipment-diagram"></div>
     </div>
 
     <!-- Interactive: Backwash Decision Tool -->
-    <div class="interactive-section" style="margin-bottom:var(--space-8);">
+    <div class="interactive-section" id="m5-bw-tool" style="margin-bottom:var(--space-8);">
       <div class="interactive-section__title">🔧 Backwash Decision Tool</div>
       <div class="interactive-section__subtitle">Enter the pressure readings and filter type to get a recommendation.</div>
       <div class="backwash-tool">
@@ -230,7 +230,7 @@
       </div>
     </div>
 
-    <div style="text-align:center; margin-bottom:var(--space-8);">
+    <div id="m5-refcard" style="text-align:center; margin-bottom:var(--space-8);">
       <a href="../reference-cards/ref-card-5.html" class="btn btn-secondary" target="_blank">🖨️ Print Reference Card — Module 5</a>
     </div>
 
@@ -244,6 +244,7 @@
 <script src="../assets/js/engine.js"></script>
 <script src="../assets/js/interactions/diagram.js"></script>
 <script src="../assets/js/interactions/flip-cards.js"></script>
+<script src="../assets/js/pager.js"></script>
 
 <script>
   Progress.init();
@@ -256,6 +257,15 @@
   });
 
   QuizEngine.render('module5', 'quiz-container');
+
+  // Pagination
+  ModulePager.init([
+    { title: 'How It Works',    elements: ['section-flow'] },
+    { title: 'Equipment Pad',   elements: ['section-components', 'm5-diagram'] },
+    { title: 'Filter Types',    elements: ['section-filters'] },
+    { title: 'Backwashing',     elements: ['section-backwash', 'm5-bw-tool'] },
+    { title: 'Review & Quiz',   elements: ['module5-flashcards', 'module-quiz', 'm5-refcard'] },
+  ]);
 
   Diagram.create({
     containerId: 'equipment-diagram',

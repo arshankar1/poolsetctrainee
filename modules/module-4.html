@@ -171,14 +171,14 @@
     </div>
 
     <!-- Interactive: Chemical Dosing Calculator -->
-    <div class="interactive-section" style="margin-bottom:var(--space-8);">
+    <div class="interactive-section" id="m4-calculator" style="margin-bottom:var(--space-8);">
       <div class="interactive-section__title">🧮 Chemical Dosing Calculator</div>
       <div class="interactive-section__subtitle">Select pool volume, the chemical needed, and how much correction is required — get the exact dose.</div>
       <div id="chem-calculator"></div>
     </div>
 
     <!-- Interactive: Scenario -->
-    <div class="interactive-section" style="margin-bottom:var(--space-8);">
+    <div class="interactive-section" id="m4-scenario" style="margin-bottom:var(--space-8);">
       <div class="interactive-section__title">💥 "What Would You Do?" Chemistry Scenarios</div>
       <div class="interactive-section__subtitle">Work through three common field situations. Wrong choices show what would happen — then redirect you to the right answer.</div>
       <div id="chem-scenario"></div>
@@ -196,7 +196,7 @@
       </div>
     </div>
 
-    <div style="text-align:center; margin-bottom:var(--space-8);">
+    <div id="m4-refcard" style="text-align:center; margin-bottom:var(--space-8);">
       <a href="../reference-cards/ref-card-4.html" class="btn btn-secondary" target="_blank">🖨️ Print Reference Card — Module 4</a>
     </div>
 
@@ -211,6 +211,7 @@
 <script src="../assets/js/interactions/calculator.js"></script>
 <script src="../assets/js/interactions/scenario.js"></script>
 <script src="../assets/js/interactions/flip-cards.js"></script>
+<script src="../assets/js/pager.js"></script>
 
 <script>
   Progress.init();
@@ -224,6 +225,14 @@
 
   QuizEngine.render('module4', 'quiz-container');
   Calculator.create({ containerId: 'chem-calculator' });
+
+  // Pagination
+  ModulePager.init([
+    { title: 'Chemical Dosing',   elements: ['section-dosing', 'm4-calculator'] },
+    { title: 'Chemical Safety',   elements: ['section-safety'] },
+    { title: 'Phosphates',        elements: ['section-phosphates', 'm4-scenario'] },
+    { title: 'Review & Quiz',     elements: ['module4-flashcards', 'module-quiz', 'm4-refcard'] },
+  ]);
 
   Scenario.create({
     containerId: 'chem-scenario',

@@ -194,7 +194,7 @@
     </div>
 
     <!-- Interactive: Symptom Sorter -->
-    <div class="interactive-section" style="margin-bottom:var(--space-8);">
+    <div class="interactive-section" id="m1-symptom-sorter" style="margin-bottom:var(--space-8);">
       <div class="interactive-section__title">🌡️ Heat Illness Symptom Sorter</div>
       <div class="interactive-section__subtitle">Drag each word into the correct column: Is it a real heat illness symptom, or a distractor?</div>
       <div id="symptom-sorter"></div>
@@ -221,7 +221,7 @@
     </div>
 
     <!-- Reference Card Link -->
-    <div style="text-align:center; margin-bottom:var(--space-8);">
+    <div id="m1-refcard" style="text-align:center; margin-bottom:var(--space-8);">
       <a href="../reference-cards/ref-card-1.html" class="btn btn-secondary" target="_blank">🖨️ Print Reference Card — Module 1</a>
     </div>
 
@@ -235,6 +235,7 @@
 <script src="../assets/js/engine.js"></script>
 <script src="../assets/js/interactions/drag-drop.js"></script>
 <script src="../assets/js/interactions/flip-cards.js"></script>
+<script src="../assets/js/pager.js"></script>
 
 <script>
   Progress.init();
@@ -298,6 +299,14 @@
       document.getElementById('smith-complete-msg').style.display = 'block';
     }
   }
+
+  // Pagination
+  ModulePager.init([
+    { title: 'Harassment Law',   elements: ['section-harassment'] },
+    { title: 'Heat Safety',      elements: ['section-heat', 'm1-symptom-sorter'] },
+    { title: 'Safe Driving',     elements: ['section-smith'] },
+    { title: 'Review & Quiz',    elements: ['module1-flashcards', 'module-quiz', 'm1-refcard'] },
+  ]);
 
   // Inline knowledge check helper
   function kcAnswer(btn, isCorrect, msg) {

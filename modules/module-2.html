@@ -208,7 +208,7 @@
     </div>
 
     <!-- Interactive: Chemistry Sliders -->
-    <div class="interactive-section" style="margin-bottom:var(--space-8);">
+    <div class="interactive-section" id="m2-chem-sliders" style="margin-bottom:var(--space-8);">
       <div class="interactive-section__title">🎚️ Chemistry Range Practice</div>
       <div class="interactive-section__subtitle">Read the scenario, then drag the slider to show whether the reading is low, ideal, or high.</div>
 
@@ -251,7 +251,7 @@
       </div>
     </div>
 
-    <div style="text-align:center; margin-bottom:var(--space-8);">
+    <div id="m2-refcard" style="text-align:center; margin-bottom:var(--space-8);">
       <a href="../reference-cards/ref-card-2.html" class="btn btn-secondary" target="_blank">🖨️ Print Reference Card — Module 2</a>
     </div>
 
@@ -264,6 +264,7 @@
 <script src="../assets/js/navigation.js"></script>
 <script src="../assets/js/engine.js"></script>
 <script src="../assets/js/interactions/flip-cards.js"></script>
+<script src="../assets/js/pager.js"></script>
 
 <script>
   Progress.init();
@@ -289,6 +290,15 @@
       { front: 'What happens to chlorine effectiveness at pH 8.0?', back: 'Only ~20% is in active form — 5x less effective than at 7.4' },
     ],
   });
+
+  // Pagination
+  ModulePager.init([
+    { title: 'Key Terms',         elements: ['section-basics'] },
+    { title: 'Three Elements',    elements: ['section-three'] },
+    { title: 'Chemistry Ranges',  elements: ['section-chemistry', 'm2-chem-sliders'] },
+    { title: 'CYA Explained',     elements: ['section-cya'] },
+    { title: 'Review & Quiz',     elements: ['module2-flashcards', 'module-quiz', 'm2-refcard'] },
+  ]);
 
   // Pool Care Wheel logic
   var wheelVisited = new Set();

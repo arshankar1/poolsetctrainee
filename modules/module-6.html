@@ -151,7 +151,7 @@
     </div>
 
     <!-- Interactive: Role-Play Scenario -->
-    <div class="interactive-section" style="margin-bottom:var(--space-8);">
+    <div class="interactive-section" id="m6-scenario" style="margin-bottom:var(--space-8);">
       <div class="interactive-section__title">🎭 Customer Interaction Role-Play</div>
       <div class="interactive-section__subtitle">Work through three real service stop scenes. Make the best choice in each situation.</div>
       <div id="customer-scenario"></div>
@@ -169,12 +169,12 @@
       </div>
     </div>
 
-    <div style="text-align:center; margin-bottom:var(--space-8);">
+    <div id="m6-refcard" style="text-align:center; margin-bottom:var(--space-8);">
       <a href="../reference-cards/ref-card-6.html" class="btn btn-secondary" target="_blank">🖨️ Print Reference Card — Module 6</a>
     </div>
 
     <!-- All Modules Done CTA -->
-    <div class="callout callout-success" style="text-align:center; padding:var(--space-8);">
+    <div id="m6-complete" class="callout callout-success" style="text-align:center; padding:var(--space-8);">
       <div style="font-size:48px; margin-bottom:var(--space-4);">🎉</div>
       <h2 style="color:var(--color-success);">You've completed all 6 modules!</h2>
       <p style="max-width:none;">Head back to the dashboard to take the final 25-question assessment.</p>
@@ -191,6 +191,7 @@
 <script src="../assets/js/engine.js"></script>
 <script src="../assets/js/interactions/scenario.js"></script>
 <script src="../assets/js/interactions/flip-cards.js"></script>
+<script src="../assets/js/pager.js"></script>
 
 <script>
   Progress.init();
@@ -203,6 +204,15 @@
   });
 
   QuizEngine.render('module6', 'quiz-container');
+
+  // Pagination
+  ModulePager.init([
+    { title: 'SEC Greeting',       elements: ['section-sec'] },
+    { title: 'Handling Complaints',elements: ['section-complaints'] },
+    { title: 'Raving Fans',        elements: ['section-raving'] },
+    { title: 'Practice Scenarios', elements: ['m6-scenario'] },
+    { title: 'Review & Quiz',      elements: ['module6-flashcards', 'module-quiz', 'm6-refcard', 'm6-complete'] },
+  ]);
 
   Scenario.create({
     containerId: 'customer-scenario',
