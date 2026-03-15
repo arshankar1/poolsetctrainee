@@ -22,7 +22,7 @@
       <div style="position:relative; z-index:1;">
         <div style="font-size:var(--text-sm); font-weight:600; text-transform:uppercase; letter-spacing:.08em; opacity:.75; margin-bottom:var(--space-2);">Module 4 of 6 · 2 hrs</div>
         <h1 style="color:white; margin-bottom:var(--space-3); font-size:var(--text-3xl);">Water Chemistry Deep Dive</h1>
-        <p style="opacity:.9; margin:0; max-width:56ch;">Master chemical dosing calculations, understand phosphates and CYA limits, and learn the critical safety rules that prevent dangerous chemical reactions.</p>
+        <p style="opacity:.9; margin:0; max-width:56ch;">Learn how to figure out the right amount of chemical to add, understand the rules that keep you safe when handling pool chemicals, and learn about two hidden problems that can wreck a pool's chemistry.</p>
       </div>
       <div style="position:absolute; right:-20px; top:-20px; font-size:120px; opacity:.08; pointer-events:none; z-index:0;">⚗️</div>
     </div>
@@ -31,17 +31,37 @@
     <div class="callout callout-info" style="margin-bottom:var(--space-8);">
       <strong>By the end of this module you will be able to:</strong>
       <ul style="margin-top:var(--space-3); padding-left:var(--space-5); list-style:disc;">
-        <li>Calculate approximate chemical dosing for common corrections</li>
-        <li>Explain the danger of over-stabilization and how to resolve it</li>
-        <li>State the critical rules for handling shock safely</li>
-        <li>Identify chemical combinations that must never be mixed</li>
+        <li>Calculate roughly how much chemical to add for common corrections</li>
+        <li>Explain what over-stabilization is and how to fix it</li>
+        <li>Describe the correct way to handle and add shock to a pool</li>
+        <li>Name the chemical combinations that are dangerous and must never be mixed</li>
       </ul>
     </div>
 
     <!-- Section 1: Chemical Dosing -->
     <div class="content-section" id="section-dosing" style="margin-bottom:var(--space-8);">
-      <h2>1. Chemical Dosing Fundamentals</h2>
-      <p>Dosing is not guesswork. Every chemical addition should be based on: (1) the current reading, (2) the target reading, and (3) the pool volume. Under-dosing wastes time and money. Over-dosing harms the water and can be dangerous.</p>
+      <h2>1. Chemical Dosing — How Much to Add</h2>
+
+      <p><strong>What is dosing?</strong> Dosing just means figuring out how much of a chemical to add to the pool. You don't want to add too little (the problem won't get fixed) and you don't want to add too much (you'll create a new problem or waste money).</p>
+
+      <p>Every dosing decision depends on three things:</p>
+      <ol style="padding-left:var(--space-6); margin-bottom:var(--space-4);">
+        <li><strong>What's the current reading?</strong> (You get this from testing the water)</li>
+        <li><strong>What's the target reading?</strong> (You know this from the ideal ranges in Module 2)</li>
+        <li><strong>How big is the pool?</strong> (A bigger pool needs more chemical)</li>
+      </ol>
+
+      <p><strong>Why 10,000 gallons?</strong> All dosing charts are based on 10,000 gallons as the standard unit. Most residential pools hold between 10,000 and 25,000 gallons. If a pool holds 20,000 gallons, you'd use twice the amount listed. To picture 10,000 gallons: that's roughly the amount of water in two large pickup truck beds stacked on top of each other, or about half a standard backyard pool.</p>
+
+      <div class="callout callout-info" style="margin-bottom:var(--space-5);">
+        <strong>Worked example — step by step:</strong><br/><br/>
+        You test a pool and find the alkalinity is at <strong>60 ppm</strong>. The target is 80–120 ppm. You need to raise it by at least 20 ppm. The pool holds 20,000 gallons.<br/><br/>
+        <strong>Step 1:</strong> How much do you need to raise it? → 80 (target minimum) − 60 (current) = <strong>20 ppm</strong><br/>
+        <strong>Step 2:</strong> What raises alkalinity? → Sodium bicarbonate (baking soda). The chart says 1.5 lbs per 10,000 gal raises it +10 ppm.<br/>
+        <strong>Step 3:</strong> So for +20 ppm you need: 1.5 lbs × 2 = <strong>3 lbs</strong><br/>
+        <strong>Step 4:</strong> But the pool is 20,000 gallons (twice the standard 10k): 3 lbs × 2 = <strong>6 lbs total</strong><br/><br/>
+        That's the answer: add 6 lbs of sodium bicarbonate.
+      </div>
 
       <h3>Quick Reference Dosing Table (per 10,000 gallons)</h3>
       <div style="overflow-x:auto; margin-bottom:var(--space-5);">
@@ -88,30 +108,37 @@
     <div class="content-section" id="section-safety" style="margin-bottom:var(--space-8);">
       <h2>2. Chemical Safety Rules</h2>
 
+      <p>Pool chemicals are powerful. Used correctly, they're safe and routine. Used carelessly, they can cause serious injuries, damage equipment, or create dangerous gases. These rules are not suggestions. They exist because people have been badly hurt from not following them.</p>
+
       <div class="callout callout-danger" style="margin-bottom:var(--space-5);">
         <strong>🚨 THE BIG RED RULE — Never Forget This</strong><br/>
         <strong>NEVER add granular shock directly to the pool, skimmer, or any concentrated form.</strong>
         <br/><br/>
-        Always pre-dissolve shock in a bucket of water first. Add the chemical to water — never add water to the chemical. This applies to cal-hypo, dichlor, and any granular oxidizer.
+        Always pre-dissolve shock in a bucket of water first. Here's how:<br/>
+        1. Fill a bucket with water first.<br/>
+        2. Then slowly add the shock to the water — not the other way around.<br/>
+        3. Stir until dissolved.<br/>
+        4. Pour the dissolved solution around the pool perimeter.<br/><br/>
+        Why? Dry shock granules touching the pool surface directly will bleach spots into the plaster or vinyl. And if they land on the pool steps, they can bleach a person's swimsuit or skin.
       </div>
 
       <h3>Rules That Cannot Be Broken</h3>
       <ul style="padding-left:var(--space-5); list-style:none; margin-bottom:var(--space-5);">
         <li style="padding:var(--space-3) 0; border-bottom:1px solid var(--border-color); display:flex; gap:var(--space-3);">
           <span style="color:var(--color-danger); font-size:20px; flex-shrink:0;">⛔</span>
-          <span><strong>Never mix shock and acid.</strong> Chlorine + muriatic acid = toxic chlorine gas. These must never be stored together, added to the pool at the same time, or mixed in any container.</span>
+          <span><strong>Never mix shock and acid — ever.</strong> Chlorine (shock) combined with muriatic acid creates toxic chlorine gas. This is not an exaggeration — this gas can send someone to the hospital or cause permanent lung damage. These two chemicals must never be stored near each other, added to the pool at the same time, or mixed in any container.</span>
         </li>
         <li style="padding:var(--space-3) 0; border-bottom:1px solid var(--border-color); display:flex; gap:var(--space-3);">
           <span style="color:var(--color-danger); font-size:20px; flex-shrink:0;">⛔</span>
-          <span><strong>Always add chemical to water.</strong> When pre-dissolving shock in a bucket, put water in first, then slowly add the shock. Adding water to shock can cause violent splashing or ignition.</span>
+          <span><strong>Always add chemical to water — never water to chemical.</strong> When pre-dissolving shock in a bucket, fill the bucket with water first, then slowly add the chemical. If you do it backwards (pour water onto dry chemicals), the reaction can be violent — splattering hot liquid or even igniting. Always: water first, chemical second.</span>
         </li>
         <li style="padding:var(--space-3) 0; border-bottom:1px solid var(--border-color); display:flex; gap:var(--space-3);">
           <span style="color:var(--color-warning); font-size:20px; flex-shrink:0;">⚠️</span>
-          <span><strong>Never add acid to the skimmer.</strong> Concentrated acid in pipes near the pump causes corrosion and equipment damage.</span>
+          <span><strong>Never add acid to the skimmer.</strong> Muriatic acid is extremely corrosive. Pouring it into the skimmer sends concentrated acid directly into the pump and equipment lines — this corrodes seals, valves, and internal parts. Always add acid directly to the pool near a return jet, with the pump running to circulate it.</span>
         </li>
         <li style="padding:var(--space-3) 0; display:flex; gap:var(--space-3);">
           <span style="color:var(--color-warning); font-size:20px; flex-shrink:0;">⚠️</span>
-          <span><strong>Add CYA through the skimmer in a diluted sock.</strong> CYA dissolves slowly — place it in an old sock or nylon stocking in the skimmer basket to allow gradual dissolution. Don't backwash for 48 hours.</span>
+          <span><strong>Add CYA through the skimmer in a diluted sock.</strong> CYA dissolves very slowly. Place it in an old sock or nylon stocking, then put the sock in the skimmer basket. This lets it dissolve gradually over 24–48 hours without clumping. Don't backwash the filter for 48 hours after adding CYA, or you'll flush it out before it fully dissolves.</span>
         </li>
       </ul>
 
@@ -130,13 +157,16 @@
 
     <!-- Section 3: Phosphates -->
     <div class="content-section" id="section-phosphates" style="margin-bottom:var(--space-8);">
-      <h2>3. Phosphates — Algae's Food Supply</h2>
-      <p>Phosphates enter pools from fertilizer runoff, decaying leaves, swimmer waste, and some fill water. They don't directly harm the water — but they're the primary food source for algae. A pool with high phosphates will be much harder to keep algae-free, even with proper chlorine levels.</p>
+      <h2>3. Phosphates — Algae's Food Source</h2>
 
-      <p><strong>Threshold:</strong> Act when phosphates exceed 200 ppb (parts per billion). Use a phosphate remover product — it precipitates phosphates out of solution. The water may temporarily become milky — this is normal and will clear.</p>
+      <p><strong>Think of phosphates as fertilizer for algae.</strong> Just like plants need fertilizer to grow, algae needs phosphates to grow and multiply. Phosphates get into pool water from many places — fertilizer washed in from nearby lawns, decaying leaves, bird droppings, even some tap water.</p>
+
+      <p>Phosphates don't directly make the water dangerous or cloudy. But when phosphate levels are high, algae has a constant food supply and becomes very hard to control — even if your chlorine level looks perfect. You can add chlorine all day, and the algae keeps coming back, because the root cause is the phosphates feeding it.</p>
+
+      <p><strong>When to act:</strong> Test for phosphates when a pool keeps getting algae even though the chemistry looks correct. Act when phosphates exceed <strong>200 ppb</strong> (that's parts per billion — even smaller units than ppm). Use a phosphate remover product. When you add it, the water may turn milky for a few hours — that's normal. It means the product is working. It will clear up.</p>
 
       <div class="callout callout-info">
-        <strong>Strategy:</strong> When a pool keeps getting algae despite correct chemistry, test for phosphates. High phosphates are often the hidden culprit.
+        <strong>Remember:</strong> Phosphates are the "hidden culprit" when a pool that has the right chemistry levels still keeps getting algae. Always test for them when that's happening.
       </div>
     </div>
 
