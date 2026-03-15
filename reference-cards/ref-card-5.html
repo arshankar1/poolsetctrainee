@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reference Card — Module 5: Equipment &amp; Filtration</title>
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/print.css" />
+  <style>
+    body { background: white; font-size: 9pt; font-family: var(--font-body); }
+    .ref-page { max-width: 760px; margin: 0 auto; padding: 12px 16px; }
+    .ref-header { display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid #d95f02; padding-bottom:8px; margin-bottom:12px; }
+    .ref-header__title { font-size:16pt; font-weight:700; color:#d95f02; }
+    .ref-header__sub { font-size:8pt; color:#666; text-align:right; }
+    .ref-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .ref-box { border:1px solid #ccc; border-radius:4px; padding:8px 10px; break-inside:avoid; }
+    .ref-box h3 { font-size:9pt; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:#d95f02; border-bottom:1px solid #ddd; padding-bottom:4px; margin-bottom:6px; }
+    .ref-box p { font-size:8.5pt; margin-bottom:4px; color:#333; line-height:1.4; }
+    .ref-box ul { padding-left:14px; list-style:disc; margin:4px 0; }
+    .ref-box li { font-size:8.5pt; margin-bottom:3px; color:#333; line-height:1.4; }
+    .ref-box strong { color:#000; }
+    table { width:100%; border-collapse:collapse; font-size:8.5pt; }
+    th { background:#2D3142; color:white; padding:4px 6px; text-align:left; }
+    td { border-bottom:1px solid #ddd; padding:3px 6px; }
+    tr:nth-child(even) td { background:#f9f9f9; }
+    .psi-log { width:100%; border-collapse:collapse; }
+    .psi-log th, .psi-log td { border:1px solid #ccc; padding:4px 6px; font-size:8pt; }
+    .psi-log th { background:#f0f4f8; }
+    .ref-footer { border-top:1px solid #ccc; margin-top:10px; padding-top:6px; display:flex; justify-content:space-between; font-size:7.5pt; color:#888; }
+    @media screen { body { background:#f0f4f8; } .ref-page { background:white; box-shadow:0 4px 16px rgba(0,0,0,.12); border-radius:8px; padding:24px 28px; max-width:760px; margin:20px auto; } }
+    @media print { body { background:white; } }
+  </style>
+</head>
+<body>
+<div class="ref-page">
+  <div class="ref-header">
+    <div>
+      <div style="font-size:8pt; color:#666; margin-bottom:2px;">Pools Etc · New Employee Training</div>
+      <div class="ref-header__title">Module 5 — Equipment &amp; Filtration</div>
+    </div>
+    <div class="ref-header__sub">Quick Reference Card<br/>Keep with your service kit</div>
+  </div>
+
+  <div class="ref-grid">
+    <!-- Filter Comparison -->
+    <div class="ref-box" style="grid-column:1/-1;">
+      <h3>Filter Types Comparison</h3>
+      <table>
+        <thead><tr><th>Type</th><th>Filtration</th><th>Clean Method</th><th>After Cleaning</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Sand</strong></td><td>~20 microns</td><td>Backwash → Rinse</td><td>Return to Filter position</td></tr>
+          <tr><td><strong>D.E.</strong></td><td>~2 microns</td><td>Backwash → add D.E.</td><td>Add D.E. via skimmer</td></tr>
+          <tr><td><strong>Cartridge</strong></td><td>~10 microns</td><td>Remove, rinse with hose</td><td>Reinstall — NO backwash</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- When to backwash -->
+    <div class="ref-box">
+      <h3>Backwash Decision</h3>
+      <ul>
+        <li>Backwash when PSI is <strong>8–10 above baseline</strong></li>
+        <li>Typical clean baseline: <strong>10–15 PSI</strong></li>
+        <li>After backwash: run <strong>Rinse 15–30 sec</strong></li>
+        <li>D.E.: add fresh D.E. after every backwash</li>
+        <li><strong>⛔ Never backwash cartridge filter</strong></li>
+      </ul>
+    </div>
+
+    <!-- Equipment list -->
+    <div class="ref-box">
+      <h3>Equipment Pad Components</h3>
+      <ul>
+        <li><strong>Pump</strong> — heart of circulation</li>
+        <li><strong>Strainer basket</strong> — clean every visit</li>
+        <li><strong>Filter</strong> — sand / D.E. / cartridge</li>
+        <li><strong>Pressure gauge</strong> — record baseline</li>
+        <li><strong>Heater</strong> — check for errors/noise</li>
+        <li><strong>Timeclock</strong> — verify setting</li>
+        <li><strong>Shut-off valves</strong> — note position</li>
+      </ul>
+    </div>
+
+    <!-- Pump runtime -->
+    <div class="ref-box">
+      <h3>Pump Runtime</h3>
+      <ul>
+        <li><strong>Summer:</strong> 8–12 hours/day</li>
+        <li><strong>Off-season:</strong> 6–8 hours/day</li>
+        <li>Check timeclock at every visit</li>
+        <li>Report grinding/screeching sounds</li>
+      </ul>
+    </div>
+
+    <!-- PSI Log -->
+    <div class="ref-box" style="grid-column:1/-1;">
+      <h3>Pressure Gauge Log (hand-write during visit)</h3>
+      <table class="psi-log">
+        <thead>
+          <tr><th>Date</th><th>Filter PSI Reading</th><th>Baseline PSI</th><th>Action Taken</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+          <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+          <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="ref-footer">
+    <span>Pools Etc Training Portal · Module 5</span>
+    <span>v1.0</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reference Card — Module 3: Weekly Service Procedures</title>
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/print.css" />
+  <style>
+    body { background: white; font-size: 9pt; font-family: var(--font-body); }
+    .ref-page { max-width: 760px; margin: 0 auto; padding: 12px 16px; }
+    .ref-header { display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid #2D9B5A; padding-bottom:8px; margin-bottom:12px; }
+    .ref-header__title { font-size:16pt; font-weight:700; color:#2D9B5A; }
+    .ref-header__sub { font-size:8pt; color:#666; text-align:right; }
+    .ref-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .ref-box { border:1px solid #ccc; border-radius:4px; padding:8px 10px; break-inside:avoid; }
+    .ref-box h3 { font-size:9pt; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:#2D9B5A; border-bottom:1px solid #ddd; padding-bottom:4px; margin-bottom:6px; }
+    .ref-box p { font-size:8.5pt; margin-bottom:4px; color:#333; line-height:1.4; }
+    .ref-box ul { padding-left:14px; list-style:none; margin:4px 0; }
+    .ref-box li { font-size:8.5pt; margin-bottom:5px; color:#333; line-height:1.4; display:flex; gap:6px; align-items:flex-start; }
+    .ref-box li::before { content:'☐'; font-size:10pt; flex-shrink:0; }
+    .ref-box strong { color:#000; }
+    .step-num { display:inline-block; width:18px; height:18px; border-radius:50%; background:#2D9B5A; color:white; font-size:8pt; font-weight:700; text-align:center; line-height:18px; flex-shrink:0; }
+    .ref-footer { border-top:1px solid #ccc; margin-top:10px; padding-top:6px; display:flex; justify-content:space-between; font-size:7.5pt; color:#888; }
+    @media screen { body { background:#f0f4f8; } .ref-page { background:white; box-shadow:0 4px 16px rgba(0,0,0,.12); border-radius:8px; padding:24px 28px; max-width:760px; margin:20px auto; } }
+    @media print { body { background:white; } }
+  </style>
+</head>
+<body>
+<div class="ref-page">
+  <div class="ref-header">
+    <div>
+      <div style="font-size:8pt; color:#666; margin-bottom:2px;">Pools Etc · New Employee Training</div>
+      <div class="ref-header__title">Module 3 — Weekly Service Procedures</div>
+    </div>
+    <div class="ref-header__sub">Quick Reference Card<br/>Field-fillable checklist</div>
+  </div>
+
+  <div class="ref-grid">
+    <!-- 8-Step Checklist -->
+    <div class="ref-box" style="grid-column:1/-1;">
+      <h3>8-Step Service Visit Checklist</h3>
+      <ul>
+        <li><span class="step-num">1</span> <span><strong>Scan</strong> — check pool &amp; yard for safety issues or damage</span></li>
+        <li><span class="step-num">2</span> <span><strong>Test water</strong> — pH, alk, chlorine, CYA (record readings)</span></li>
+        <li><span class="step-num">3</span> <span><strong>Skim</strong> — remove floating leaves and surface debris</span></li>
+        <li><span class="step-num">4</span> <span><strong>Brush</strong> — walls, steps, and floor edges (correct brush type!)</span></li>
+        <li><span class="step-num">5</span> <span><strong>Vacuum</strong> — floor, slow overlapping passes (25–30% overlap)</span></li>
+        <li><span class="step-num">6</span> <span><strong>Clean skimmer basket</strong> — empty &amp; rinse</span></li>
+        <li><span class="step-num">7</span> <span><strong>Add chemicals</strong> — based on test results (AFTER all cleaning)</span></li>
+        <li><span class="step-num">8</span> <span><strong>Check equipment</strong> — pump, filter pressure, timeclock, note issues</span></li>
+      </ul>
+    </div>
+
+    <!-- Brush guide -->
+    <div class="ref-box">
+      <h3>Brush Selection</h3>
+      <ul style="list-style:disc; padding-left:14px;">
+        <li style="display:list-item;"><strong>Plaster/Gunite:</strong> Combo nylon + SS steel</li>
+        <li style="display:list-item;"><strong>Vinyl liner:</strong> Soft nylon ONLY</li>
+        <li style="display:list-item;"><strong>Fiberglass:</strong> Soft nylon ONLY</li>
+      </ul>
+      <p style="margin-top:6px; color:#D62839; font-weight:600;">⛔ Never use steel on vinyl or fiberglass</p>
+    </div>
+
+    <!-- Vacuuming tip -->
+    <div class="ref-box">
+      <h3>Vacuuming Tips</h3>
+      <ul style="list-style:disc; padding-left:14px;">
+        <li style="display:list-item;">Move <strong>slowly</strong> — don't stir up sediment</li>
+        <li style="display:list-item;"><strong>25–30% overlap</strong> on each pass</li>
+        <li style="display:list-item;">Straight passes end to end</li>
+        <li style="display:list-item;">Start in deep end → shallow end</li>
+        <li style="display:list-item;">Watch pressure gauge during vacuuming</li>
+      </ul>
+    </div>
+
+    <!-- Chemical add reminder -->
+    <div class="ref-box" style="grid-column:1/-1; background:#fff8e6; border-color:#e07b00;">
+      <h3 style="color:#e07b00; border-color:#fcd97a;">⚠️ Why Chemicals Go LAST</h3>
+      <p>Adding chemicals before or during cleaning stirs debris that absorbs chemicals unevenly. Always complete ALL mechanical cleaning first, then add chemicals to a settled pool for proper distribution.</p>
+    </div>
+  </div>
+
+  <div class="ref-footer">
+    <span>Pools Etc Training Portal · Module 3</span>
+    <span>v1.0 · Date: _____________ · Address: _________________________</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reference Card — Module 4: Water Chemistry Deep Dive</title>
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/print.css" />
+  <style>
+    body { background: white; font-size: 9pt; font-family: var(--font-body); }
+    .ref-page { max-width: 760px; margin: 0 auto; padding: 12px 16px; }
+    .ref-header { display:flex; justify-content:space-between; align-items:flex-end; border-bottom:3px solid #e07b00; padding-bottom:8px; margin-bottom:12px; }
+    .ref-header__title { font-size:16pt; font-weight:700; color:#e07b00; }
+    .ref-header__sub { font-size:8pt; color:#666; text-align:right; }
+    .ref-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .ref-box { border:1px solid #ccc; border-radius:4px; padding:8px 10px; break-inside:avoid; }
+    .ref-box h3 { font-size:9pt; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:#e07b00; border-bottom:1px solid #ddd; padding-bottom:4px; margin-bottom:6px; }
+    .ref-box p { font-size:8.5pt; margin-bottom:4px; color:#333; line-height:1.4; }
+    .ref-box ul { padding-left:14px; list-style:disc; margin:4px 0; }
+    .ref-box li { font-size:8.5pt; margin-bottom:3px; color:#333; line-height:1.4; }
+    .ref-box strong { color:#000; }
+    table { width:100%; border-collapse:collapse; font-size:8.5pt; }
+    th { background:#2D3142; color:white; padding:4px 6px; text-align:left; }
+    td { border-bottom:1px solid #ddd; padding:3px 6px; }
+    tr:nth-child(even) td { background:#f9f9f9; }
+    .danger-box { background:#fdeaec; border:3px solid #D62839; }
+    .danger-box h3 { color:#D62839; border-color:#fcd0d4; font-size:11pt; }
+    .danger-box p { font-size:9pt; font-weight:600; color:#D62839; }
+    .ref-footer { border-top:1px solid #ccc; margin-top:10px; padding-top:6px; display:flex; justify-content:space-between; font-size:7.5pt; color:#888; }
+    @media screen { body { background:#f0f4f8; } .ref-page { background:white; box-shadow:0 4px 16px rgba(0,0,0,.12); border-radius:8px; padding:24px 28px; max-width:760px; margin:20px auto; } }
+    @media print { body { background:white; } }
+  </style>
+</head>
+<body>
+<div class="ref-page">
+  <div class="ref-header">
+    <div>
+      <div style="font-size:8pt; color:#666; margin-bottom:2px;">Pools Etc · New Employee Training</div>
+      <div class="ref-header__title">Module 4 — Water Chemistry Deep Dive</div>
+    </div>
+    <div class="ref-header__sub">Quick Reference Card<br/>Keep with your chemical kit</div>
+  </div>
+
+  <div class="ref-grid">
+    <!-- BIG RED BOX -->
+    <div class="ref-box danger-box" style="grid-column:1/-1;">
+      <h3>🚨 THE BIG RED RULE — SHOCK SAFETY</h3>
+      <p>NEVER add granular shock directly to the pool, skimmer, or any concentrated form.</p>
+      <p style="font-size:8.5pt; color:#333; font-weight:400; margin-top:4px;">Always pre-dissolve shock in a bucket of water first (add chemical to water — not water to chemical). Distribute solution around pool perimeter.</p>
+    </div>
+
+    <!-- Dosing Table -->
+    <div class="ref-box" style="grid-column:1/-1;">
+      <h3>Quick-Dose Table (per 10,000 gallons)</h3>
+      <table>
+        <thead><tr><th>Goal</th><th>Chemical</th><th>Dose</th><th>Change</th></tr></thead>
+        <tbody>
+          <tr><td>Raise Alkalinity</td><td>Sodium Bicarbonate</td><td><strong>1.5 lbs</strong></td><td>+10 ppm alk</td></tr>
+          <tr><td>Lower pH</td><td>Muriatic Acid</td><td><strong>10 oz</strong></td><td>-0.2 pH</td></tr>
+          <tr><td>Raise CYA</td><td>Cyanuric Acid</td><td><strong>1.3 lbs</strong></td><td>+10 ppm CYA</td></tr>
+          <tr><td>Shock Pool</td><td>Cal-Hypo 68%</td><td><strong>1 lb</strong></td><td>+7 ppm FC</td></tr>
+          <tr><td>Raise Calcium</td><td>Calcium Chloride</td><td><strong>1.25 lbs</strong></td><td>+10 ppm CH</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CYA Table -->
+    <div class="ref-box">
+      <h3>CYA Guide</h3>
+      <ul>
+        <li>Ideal outdoor pool: <strong>30–50 ppm</strong></li>
+        <li>Over-stabilized: above <strong>80–100 ppm</strong></li>
+        <li>At 150 ppm: chlorine barely works</li>
+        <li><strong>Fix:</strong> Drain &amp; refill only</li>
+        <li>No chemical removes CYA</li>
+        <li>CYA adds up from trichlor tabs</li>
+      </ul>
+    </div>
+
+    <!-- Never Mix -->
+    <div class="ref-box">
+      <h3>⛔ Never Mix</h3>
+      <ul>
+        <li><strong>Shock + Muriatic Acid</strong><br/><span style="font-size:8pt; color:#D62839;">Creates toxic chlorine gas</span></li>
+        <li style="margin-top:6px;">Always wait <strong>30+ min</strong> between shock and acid additions</li>
+        <li>Never add acid to skimmer</li>
+        <li>Never mix chemicals in same bucket</li>
+      </ul>
+    </div>
+
+    <!-- Phosphates -->
+    <div class="ref-box" style="grid-column:1/-1;">
+      <h3>Phosphates</h3>
+      <p>Phosphates are algae's primary food source. Act when above <strong>200 ppb</strong>. Use phosphate remover — water may turn milky briefly, this is normal. High phosphates = persistent algae despite correct chemistry.</p>
+    </div>
+  </div>
+
+  <div class="ref-footer">
+    <span>Pools Etc Training Portal · Module 4</span>
+    <span>v1.0</span>
+  </div>
+</div>
+</body>
+</html>

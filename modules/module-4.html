@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 4 — Water Chemistry Deep Dive | Pools Etc Training</title>
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/quiz.css" />
+  <link rel="stylesheet" href="../assets/css/interactive.css" />
+  <link rel="stylesheet" href="../assets/css/print.css" />
+</head>
+<body>
+
+<div id="nav-root"></div>
+
+<div class="page-wrapper">
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="module-hero" style="background: linear-gradient(135deg, var(--module-4) 0%, #b06000 100%); border-radius: var(--radius-xl); padding: var(--space-10) var(--space-8); margin-bottom: var(--space-8); color:white; position:relative; overflow:hidden;">
+      <div style="position:relative; z-index:1;">
+        <div style="font-size:var(--text-sm); font-weight:600; text-transform:uppercase; letter-spacing:.08em; opacity:.75; margin-bottom:var(--space-2);">Module 4 of 6 · 2 hrs</div>
+        <h1 style="color:white; margin-bottom:var(--space-3); font-size:var(--text-3xl);">Water Chemistry Deep Dive</h1>
+        <p style="opacity:.9; margin:0; max-width:56ch;">Master chemical dosing calculations, understand phosphates and CYA limits, and learn the critical safety rules that prevent dangerous chemical reactions.</p>
+      </div>
+      <div style="position:absolute; right:-20px; top:-20px; font-size:120px; opacity:.08; pointer-events:none; z-index:0;">⚗️</div>
+    </div>
+
+    <!-- Learning Objectives -->
+    <div class="callout callout-info" style="margin-bottom:var(--space-8);">
+      <strong>By the end of this module you will be able to:</strong>
+      <ul style="margin-top:var(--space-3); padding-left:var(--space-5); list-style:disc;">
+        <li>Calculate approximate chemical dosing for common corrections</li>
+        <li>Explain the danger of over-stabilization and how to resolve it</li>
+        <li>State the critical rules for handling shock safely</li>
+        <li>Identify chemical combinations that must never be mixed</li>
+      </ul>
+    </div>
+
+    <!-- Section 1: Chemical Dosing -->
+    <div class="content-section" id="section-dosing" style="margin-bottom:var(--space-8);">
+      <h2>1. Chemical Dosing Fundamentals</h2>
+      <p>Dosing is not guesswork. Every chemical addition should be based on: (1) the current reading, (2) the target reading, and (3) the pool volume. Under-dosing wastes time and money. Over-dosing harms the water and can be dangerous.</p>
+
+      <h3>Quick Reference Dosing Table (per 10,000 gallons)</h3>
+      <div style="overflow-x:auto; margin-bottom:var(--space-5);">
+        <table style="width:100%; border-collapse:collapse;">
+          <thead>
+            <tr style="background:var(--color-dark); color:white;">
+              <th style="padding:var(--space-3) var(--space-4); text-align:left;">Goal</th>
+              <th style="padding:var(--space-3) var(--space-4); text-align:left;">Chemical</th>
+              <th style="padding:var(--space-3) var(--space-4); text-align:left;">Amount per 10k gal</th>
+              <th style="padding:var(--space-3) var(--space-4); text-align:left;">Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:var(--space-3) var(--space-4);">Raise Alkalinity</td>
+              <td style="padding:var(--space-3) var(--space-4);">Sodium Bicarbonate</td>
+              <td style="padding:var(--space-3) var(--space-4); font-weight:600;">1.5 lbs</td>
+              <td style="padding:var(--space-3) var(--space-4);">+10 ppm alk</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color); background:var(--color-bg);">
+              <td style="padding:var(--space-3) var(--space-4);">Lower pH</td>
+              <td style="padding:var(--space-3) var(--space-4);">Muriatic Acid</td>
+              <td style="padding:var(--space-3) var(--space-4); font-weight:600;">10 oz</td>
+              <td style="padding:var(--space-3) var(--space-4);">-0.2 pH</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:var(--space-3) var(--space-4);">Raise CYA</td>
+              <td style="padding:var(--space-3) var(--space-4);">Cyanuric Acid</td>
+              <td style="padding:var(--space-3) var(--space-4); font-weight:600;">1.3 lbs</td>
+              <td style="padding:var(--space-3) var(--space-4);">+10 ppm CYA</td>
+            </tr>
+            <tr style="background:var(--color-bg);">
+              <td style="padding:var(--space-3) var(--space-4);">Shock Pool</td>
+              <td style="padding:var(--space-3) var(--space-4);">Cal-Hypo (68%)</td>
+              <td style="padding:var(--space-3) var(--space-4); font-weight:600;">1 lb</td>
+              <td style="padding:var(--space-3) var(--space-4);">+7 ppm FC</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Section 2: Chemical Safety -->
+    <div class="content-section" id="section-safety" style="margin-bottom:var(--space-8);">
+      <h2>2. Chemical Safety Rules</h2>
+
+      <div class="callout callout-danger" style="margin-bottom:var(--space-5);">
+        <strong>🚨 THE BIG RED RULE — Never Forget This</strong><br/>
+        <strong>NEVER add granular shock directly to the pool, skimmer, or any concentrated form.</strong>
+        <br/><br/>
+        Always pre-dissolve shock in a bucket of water first. Add the chemical to water — never add water to the chemical. This applies to cal-hypo, dichlor, and any granular oxidizer.
+      </div>
+
+      <h3>Rules That Cannot Be Broken</h3>
+      <ul style="padding-left:var(--space-5); list-style:none; margin-bottom:var(--space-5);">
+        <li style="padding:var(--space-3) 0; border-bottom:1px solid var(--border-color); display:flex; gap:var(--space-3);">
+          <span style="color:var(--color-danger); font-size:20px; flex-shrink:0;">⛔</span>
+          <span><strong>Never mix shock and acid.</strong> Chlorine + muriatic acid = toxic chlorine gas. These must never be stored together, added to the pool at the same time, or mixed in any container.</span>
+        </li>
+        <li style="padding:var(--space-3) 0; border-bottom:1px solid var(--border-color); display:flex; gap:var(--space-3);">
+          <span style="color:var(--color-danger); font-size:20px; flex-shrink:0;">⛔</span>
+          <span><strong>Always add chemical to water.</strong> When pre-dissolving shock in a bucket, put water in first, then slowly add the shock. Adding water to shock can cause violent splashing or ignition.</span>
+        </li>
+        <li style="padding:var(--space-3) 0; border-bottom:1px solid var(--border-color); display:flex; gap:var(--space-3);">
+          <span style="color:var(--color-warning); font-size:20px; flex-shrink:0;">⚠️</span>
+          <span><strong>Never add acid to the skimmer.</strong> Concentrated acid in pipes near the pump causes corrosion and equipment damage.</span>
+        </li>
+        <li style="padding:var(--space-3) 0; display:flex; gap:var(--space-3);">
+          <span style="color:var(--color-warning); font-size:20px; flex-shrink:0;">⚠️</span>
+          <span><strong>Add CYA through the skimmer in a diluted sock.</strong> CYA dissolves slowly — place it in an old sock or nylon stocking in the skimmer basket to allow gradual dissolution. Don't backwash for 48 hours.</span>
+        </li>
+      </ul>
+
+      <!-- Knowledge Check -->
+      <div class="knowledge-check">
+        <div class="knowledge-check__label">Quick Check</div>
+        <div class="knowledge-check__question">You need to shock a pool. What is the correct process?</div>
+        <div class="knowledge-check__choices">
+          <button class="kc-choice" onclick="kcAnswer(this, false, 'NEVER add shock to the skimmer. It concentrates in the pipes and can cause dangerous reactions in the equipment.')">Pour the shock granules into the skimmer</button>
+          <button class="kc-choice" onclick="kcAnswer(this, false, 'Adding directly to the pool, especially near steps or a concentrated area, causes bleaching and uneven distribution.')">Pour granules directly into the pool near the steps</button>
+          <button class="kc-choice" onclick="kcAnswer(this, true, '✅ Correct! Pre-dissolve in a bucket of water, then distribute the solution around the pool perimeter. Add chemical to water — never water to chemical.')">Pre-dissolve in a bucket of water, then distribute around the perimeter</button>
+          <button class="kc-choice" onclick="kcAnswer(this, false, 'Scattering granules causes uneven contact with the pool surface and can bleach plaster or vinyl.')">Broadcast granules evenly across the pool surface</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Phosphates -->
+    <div class="content-section" id="section-phosphates" style="margin-bottom:var(--space-8);">
+      <h2>3. Phosphates — Algae's Food Supply</h2>
+      <p>Phosphates enter pools from fertilizer runoff, decaying leaves, swimmer waste, and some fill water. They don't directly harm the water — but they're the primary food source for algae. A pool with high phosphates will be much harder to keep algae-free, even with proper chlorine levels.</p>
+
+      <p><strong>Threshold:</strong> Act when phosphates exceed 200 ppb (parts per billion). Use a phosphate remover product — it precipitates phosphates out of solution. The water may temporarily become milky — this is normal and will clear.</p>
+
+      <div class="callout callout-info">
+        <strong>Strategy:</strong> When a pool keeps getting algae despite correct chemistry, test for phosphates. High phosphates are often the hidden culprit.
+      </div>
+    </div>
+
+    <!-- Interactive: Chemical Dosing Calculator -->
+    <div class="interactive-section" style="margin-bottom:var(--space-8);">
+      <div class="interactive-section__title">🧮 Chemical Dosing Calculator</div>
+      <div class="interactive-section__subtitle">Select pool volume, the chemical needed, and how much correction is required — get the exact dose.</div>
+      <div id="chem-calculator"></div>
+    </div>
+
+    <!-- Interactive: Scenario -->
+    <div class="interactive-section" style="margin-bottom:var(--space-8);">
+      <div class="interactive-section__title">💥 "What Would You Do?" Chemistry Scenarios</div>
+      <div class="interactive-section__subtitle">Work through three common field situations. Wrong choices show what would happen — then redirect you to the right answer.</div>
+      <div id="chem-scenario"></div>
+    </div>
+
+    <!-- Flashcards -->
+    <div id="module4-flashcards"></div>
+
+    <!-- Module Quiz -->
+    <div class="card" id="module-quiz" style="margin-bottom:var(--space-8);">
+      <div class="card-body">
+        <h2 style="margin-bottom:var(--space-2);">Module 4 Quiz</h2>
+        <p style="margin-bottom:var(--space-5); color:var(--color-locked);">10 questions · 80% to pass (8/10)</p>
+        <div id="quiz-container"></div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-bottom:var(--space-8);">
+      <a href="../reference-cards/ref-card-4.html" class="btn btn-secondary" target="_blank">🖨️ Print Reference Card — Module 4</a>
+    </div>
+
+  </div>
+</div>
+
+<div id="footer-nav-root"></div>
+
+<script src="../assets/js/progress.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/engine.js"></script>
+<script src="../assets/js/interactions/calculator.js"></script>
+<script src="../assets/js/interactions/scenario.js"></script>
+<script src="../assets/js/interactions/flip-cards.js"></script>
+
+<script>
+  Progress.init();
+  Navigation.renderHeader({ moduleNumber: 4, moduleTitle: 'Water Chemistry Deep Dive' });
+  Navigation.renderFooterNav({
+    prevUrl: 'module-3.html',
+    nextUrl: 'module-5.html',
+    quizContainerId: 'module-quiz',
+    quizAlreadyPassed: Progress.getStatus('module4').quizPassed,
+  });
+
+  QuizEngine.render('module4', 'quiz-container');
+  Calculator.create({ containerId: 'chem-calculator' });
+
+  Scenario.create({
+    containerId: 'chem-scenario',
+    scenes: [
+      {
+        id: 's1',
+        title: 'Scene 1 — The Green Pool',
+        narrative: 'You arrive at a customer\'s pool and it\'s a swamp — bright green algae everywhere. You have a bag of cal-hypo shock in your truck. The customer is watching.',
+        question: 'How do you add the shock?',
+        choices: [
+          {
+            text: 'Open the bag and pour it directly into the deep end of the pool',
+            correct: false,
+            feedback: '❌ This would bleach the plaster and create concentrated zones. Always pre-dissolve first — even when you\'re in a hurry.',
+          },
+          {
+            text: 'Pre-dissolve the shock in a bucket of water, then distribute the solution around the perimeter',
+            correct: true,
+            feedback: '✅ Correct! Add water to the bucket first, then slowly add the shock while stirring. Distribute the diluted solution evenly around the perimeter. This prevents bleaching and uneven distribution.',
+          },
+          {
+            text: 'Pour it into the skimmer basket so it distributes through the circulation system',
+            correct: false,
+            feedback: '❌ Never add shock to the skimmer. Concentrated chlorine in the equipment lines can corrode the pump, valves, and filter internals.',
+          },
+        ],
+      },
+      {
+        id: 's2',
+        title: 'Scene 2 — pH Too High',
+        narrative: 'A pool pH tests at 7.9. You need to lower it. You have muriatic acid in your truck. You already added shock 10 minutes ago.',
+        question: 'What do you do?',
+        choices: [
+          {
+            text: 'Add the acid to the skimmer basket to let it circulate through the system',
+            correct: false,
+            feedback: '❌ Never add acid to the skimmer — it will corrode pipes, pump seals, and equipment. Always add acid to the pool directly near a return jet.',
+          },
+          {
+            text: 'Wait at least 30 minutes after the shock before adding acid, then slowly pour near a return jet with pump running',
+            correct: true,
+            feedback: '✅ Correct! Always wait at least 30 minutes between adding shock and acid. Adding them too close together — even in a large pool — creates dangerous chlorine gas concentrations near the surface.',
+          },
+          {
+            text: 'Add the acid right now — you already added the shock 10 minutes ago, that\'s long enough',
+            correct: false,
+            feedback: '❌ Ten minutes is not long enough. Wait at least 30 minutes. In a small pool or with concentrated chemicals, adding acid too soon after shock produces toxic chlorine gas.',
+          },
+        ],
+      },
+      {
+        id: 's3',
+        title: 'Scene 3 — CYA Too High',
+        narrative: 'You test a residential pool and CYA reads 140 ppm. The pool is struggling to hold chlorine even though you\'re adding plenty. The customer asks why the pool keeps losing chlorine.',
+        question: 'What do you tell the customer and what\'s the solution?',
+        choices: [
+          {
+            text: '"Add more chlorine — it just needs a bigger dose to compensate for the high CYA."',
+            correct: false,
+            feedback: '❌ This is a band-aid, not a solution. At 140 ppm CYA, even massive chlorine doses will be ineffective. Over-stabilization is the root cause.',
+          },
+          {
+            text: '"We need to partially drain the pool and refill with fresh water — there\'s no chemical to remove CYA."',
+            correct: true,
+            feedback: '✅ Correct! CYA cannot be removed chemically. Draining 25–50% of the water and refilling with fresh water will dilute CYA to a manageable level. Explain this clearly and professionally to the customer.',
+          },
+          {
+            text: '"We can use muriatic acid to neutralize the excess CYA."',
+            correct: false,
+            feedback: '❌ Muriatic acid lowers pH — it has no effect on CYA. There is no neutralizing agent for CYA. Dilution is the only solution.',
+          },
+        ],
+      },
+    ],
+    finalScreen: {
+      html: '<div class="scenario-final__title">✅ Chemistry Scenarios Complete!</div>'
+        + '<p>Remember the key rules: pre-dissolve shock, never mix with acid, wait between additions, and there\'s no chemical fix for high CYA.</p>',
+    },
+  });
+
+  FlipCards.create({
+    containerId: 'module4-flashcards',
+    cards: [
+      { front: 'What raises total alkalinity?', back: 'Sodium bicarbonate (baking soda) — 1.5 lbs per 10k gal raises alk by 10 ppm' },
+      { front: 'What lowers pH?', back: 'Muriatic acid — always add acid to water, never water to acid' },
+      { front: 'The Big Red Rule about shock', back: 'ALWAYS pre-dissolve in a bucket of water first. NEVER add to skimmer or directly to pool.' },
+      { front: 'How do you fix CYA at 150 ppm?', back: 'There\'s no chemical fix — partially drain and refill with fresh water.' },
+      { front: 'What should you NEVER mix?', back: 'Shock (chlorine) + muriatic acid = toxic chlorine gas' },
+      { front: 'What do phosphates do?', back: 'They fuel algae growth — act when above 200 ppb using phosphate remover' },
+    ],
+  });
+
+  function kcAnswer(btn, isCorrect, msg) {
+    var parent = btn.closest('.knowledge-check');
+    var btns = parent.querySelectorAll('.kc-choice');
+    btns.forEach(function(b) { b.disabled = true; if (b === btn) b.classList.add(isCorrect ? 'correct' : 'wrong'); });
+    var reveal = parent.querySelector('.kc-answer-reveal');
+    if (reveal) { reveal.textContent = msg; reveal.classList.add('visible'); }
+  }
+</script>
+</body>
+</html>

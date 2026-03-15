@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final Assessment | Pools Etc Training</title>
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/quiz.css" />
+  <link rel="stylesheet" href="assets/css/print.css" />
+  <style>
+    .final-hero {
+      background: linear-gradient(135deg, var(--color-dark) 0%, #1e2340 100%);
+      color: white;
+      border-radius: var(--radius-xl);
+      padding: var(--space-10) var(--space-8);
+      margin-bottom: var(--space-8);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .final-hero__title { color: white; font-size: var(--text-3xl); margin-bottom: var(--space-3); }
+    .final-hero__sub { opacity: .8; max-width: 52ch; margin: 0 auto; }
+    .final-hero__watermark {
+      position: absolute; right: -20px; top: -20px;
+      font-size: 120px; opacity: .05; pointer-events: none;
+    }
+    .locked-overlay {
+      background: var(--color-bg);
+      border: 2px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: var(--space-12) var(--space-8);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal site nav -->
+  <nav style="background:white; border-bottom:1px solid var(--border-color); padding:0 var(--space-6); height:52px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100; box-shadow:var(--shadow-xs);">
+    <a href="index.html" style="font-weight:700; font-size:var(--text-lg); color:var(--color-primary); text-decoration:none;">🏊 Pools Etc</a>
+    <a href="index.html" class="btn btn-ghost btn-sm">← Back to Dashboard</a>
+  </nav>
+
+  <div class="page-wrapper--no-footer">
+    <div class="container">
+
+      <!-- Hero -->
+      <div class="final-hero">
+        <div class="final-hero__watermark">📋</div>
+        <div style="font-size:48px; margin-bottom:var(--space-4);">📋</div>
+        <h1 class="final-hero__title">Final Assessment</h1>
+        <p class="final-hero__sub">25 questions covering all 6 modules. You need 80% (20/25) to pass and earn your completion certificate.</p>
+        <div style="display:flex; gap:var(--space-4); justify-content:center; margin-top:var(--space-6); flex-wrap:wrap;">
+          <div style="background:rgba(255,255,255,0.1); border-radius:var(--radius-md); padding:var(--space-3) var(--space-5);">
+            <div style="font-size:var(--text-xl); font-weight:700;">25</div>
+            <div style="font-size:var(--text-xs); opacity:.7;">Questions</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.1); border-radius:var(--radius-md); padding:var(--space-3) var(--space-5);">
+            <div style="font-size:var(--text-xl); font-weight:700;">80%</div>
+            <div style="font-size:var(--text-xs); opacity:.7;">To Pass</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.1); border-radius:var(--radius-md); padding:var(--space-3) var(--space-5);">
+            <div style="font-size:var(--text-xl); font-weight:700;">6</div>
+            <div style="font-size:var(--text-xs); opacity:.7;">Modules Covered</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lock gate — shown if not all modules are complete -->
+      <div id="lock-gate" class="locked-overlay" style="display:none;">
+        <div style="font-size:48px; margin-bottom:var(--space-4);">🔒</div>
+        <h2 style="margin-bottom:var(--space-3);">Complete All Modules First</h2>
+        <p style="max-width:42ch; margin:0 auto var(--space-5);">You must pass all 6 module quizzes before unlocking the final assessment.</p>
+        <a href="index.html" class="btn btn-primary">Return to Dashboard →</a>
+      </div>
+
+      <!-- Quiz container — shown when unlocked -->
+      <div id="quiz-gate">
+        <div class="callout callout-info" style="margin-bottom:var(--space-6);">
+          <strong>Tips for success:</strong> Answer all questions, then click Submit. Short-answer questions are reviewed with your trainer and don't affect your score. Review your module reference cards if you need to refresh.
+        </div>
+        <div class="card" id="final-quiz-card">
+          <div class="card-body">
+            <div id="final-quiz-container"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="assets/js/progress.js"></script>
+  <script src="assets/js/engine.js"></script>
+  <script>
+    Progress.init();
+
+    var allComplete = Progress.getCompletedCount() === 6;
+    var lockGate  = document.getElementById('lock-gate');
+    var quizGate  = document.getElementById('quiz-gate');
+
+    if (!allComplete) {
+      lockGate.style.display  = 'block';
+      quizGate.style.display  = 'none';
+    } else {
+      lockGate.style.display  = 'none';
+      quizGate.style.display  = 'block';
+
+      // Override grade to save final quiz result
+      var origGrade = QuizEngine.grade;
+      QuizEngine.grade = function(moduleId, containerId) {
+        var result = origGrade(moduleId, containerId);
+        if (result && moduleId === 'final') {
+          Progress.markFinalQuizComplete(result.score, result.passed);
+        }
+        return result;
+      };
+
+      QuizEngine.render('final', 'final-quiz-container');
+    }
+  </script>
+</body>
+</html>
