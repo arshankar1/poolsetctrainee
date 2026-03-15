@@ -23,7 +23,7 @@ const QUIZ_DATA = {
     {
       id: 'm1q1',
       type: 'mc',
-      question: 'Under CA law (SB 1343), how many hours of sexual harassment prevention training are required for non-supervisory employees?',
+      question: 'Under California\'s SB 1343 law, how many hours of harassment prevention training does a regular (non-supervisor) employee need?',
       choices: ['30 minutes', '1 hour', '2 hours', '4 hours'],
       correct: 1,
       explanation: 'SB 1343 requires 1 hour for non-supervisory employees, renewed every 2 years.',
@@ -135,7 +135,7 @@ const QUIZ_DATA = {
       question: 'What is the ideal total alkalinity range for most pools?',
       choices: ['20–40 ppm', '50–70 ppm', '80–120 ppm', '150–200 ppm'],
       correct: 2,
-      explanation: 'Total alkalinity should be 80–120 ppm. It acts as a buffer to stabilize pH.',
+      explanation: 'Total alkalinity should be 80–120 ppm. It acts as a buffer — meaning it absorbs changes and keeps pH from jumping around.',
     },
     {
       id: 'm2q4',
@@ -405,7 +405,7 @@ const QUIZ_DATA = {
         'Algae growth',
       ],
       correct: 1,
-      explanation: 'Soft water (low calcium) is aggressive — it pulls calcium FROM the plaster to reach equilibrium, causing etching, pitting, and rough surfaces.',
+      explanation: 'Water with low calcium is aggressive — it literally pulls calcium out of the plaster surface to make up for what it\'s missing. This causes etching and pitting (small scratches and holes that make the surface rough and look worn).',
     },
     {
       id: 'm4q9',
@@ -502,7 +502,7 @@ const QUIZ_DATA = {
     {
       id: 'm5q7',
       type: 'mc',
-      question: 'A pool pump is making a loud screeching or grinding noise. This most likely indicates:',
+      question: 'A pool pump is making a loud screeching or grinding noise. What does this most likely mean?',
       choices: [
         'The pump is working correctly under high load',
         'The impeller is clogged or bearings are failing',

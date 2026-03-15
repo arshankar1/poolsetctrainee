@@ -22,7 +22,7 @@
       <div style="position:relative; z-index:1;">
         <div style="font-size:var(--text-sm); font-weight:600; text-transform:uppercase; letter-spacing:.08em; opacity:.75; margin-bottom:var(--space-2);">Module 2 of 6 · 1.1 hrs</div>
         <h1 style="color:white; margin-bottom:var(--space-3); font-size:var(--text-3xl);">Pool Fundamentals</h1>
-        <p style="opacity:.9; margin:0; max-width:56ch;">Master the three elements of pool care, understand how water chemistry works, and learn the ideal ranges for every key parameter you'll test at every service stop.</p>
+        <p style="opacity:.9; margin:0; max-width:56ch;">Learn what a pool actually needs to stay clean and safe. We'll cover the three things every pool depends on, what water chemistry means, and the key numbers you'll check at every service visit.</p>
       </div>
       <div style="position:absolute; right:-20px; top:-20px; font-size:120px; opacity:.08; pointer-events:none; z-index:0;">🏊</div>
     </div>
@@ -31,17 +31,42 @@
     <div class="callout callout-info" style="margin-bottom: var(--space-8);">
       <strong>By the end of this module you will be able to:</strong>
       <ul style="margin-top:var(--space-3); padding-left:var(--space-5); list-style:disc;">
-        <li>Explain the three elements of pool care and why each matters</li>
-        <li>State the ideal range for pH, alkalinity, calcium hardness, and CYA</li>
-        <li>Describe what CYA does and why over-stabilization is a problem</li>
-        <li>Explain why pH matters more than any other single parameter</li>
+        <li>Name the three things every pool needs to stay healthy, and explain why each one matters</li>
+        <li>Give the correct target range for pH, alkalinity, calcium hardness, and CYA from memory</li>
+        <li>Explain what CYA does, and what happens when there's too much of it</li>
+        <li>Explain why pH is the most important number to get right</li>
       </ul>
+    </div>
+
+    <!-- Building Blocks Section -->
+    <div class="content-section" id="section-basics" style="margin-bottom:var(--space-8);">
+      <h2>Before We Start: Key Terms Explained</h2>
+      <p>Pool care involves some science words that might be new to you. Before we dive in, here's a plain-English explanation of each one. You'll see these terms throughout this module and every module after it.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:var(--space-4); margin:var(--space-5) 0;">
+        <div style="background:var(--color-primary-subtle); border-radius:var(--radius-lg); padding:var(--space-5); border:1px solid #c0dff7;">
+          <div style="font-weight:700; color:var(--color-primary); margin-bottom:var(--space-2);">What is pH?</div>
+          <p style="font-size:var(--text-sm); margin:0;">pH is just a number from 0 to 14. It tells you how acidic or "basic" the water is. A 7 is neutral — like pure water. Below 7 is acidic (like lemon juice). Above 7 is basic (like baking soda). Pool water should stay between <strong>7.2 and 7.6</strong> — slightly basic. That's the sweet spot where chlorine works best and water feels comfortable to swim in.</p>
+        </div>
+        <div style="background:#fff8e6; border-radius:var(--radius-lg); padding:var(--space-5); border:1px solid #fcd97a;">
+          <div style="font-weight:700; color:var(--color-amber); margin-bottom:var(--space-2);">What is ppm?</div>
+          <p style="font-size:var(--text-sm); margin:0;">ppm stands for "parts per million." It's a way to measure tiny amounts of something in water. Here's an easy way to picture it: imagine filling a million cups of water. If 1 of those cups had something added to it, that's 1 ppm. Pool chemicals are measured in ppm because even small amounts make a big difference.</p>
+        </div>
+        <div style="background:var(--color-success-light); border-radius:var(--radius-lg); padding:var(--space-5); border:1px solid #a4d4b4;">
+          <div style="font-weight:700; color:var(--color-success); margin-bottom:var(--space-2);">What does chlorine do?</div>
+          <p style="font-size:var(--text-sm); margin:0;">Chlorine is a disinfectant. That means it kills germs, bacteria, and algae in the water. Without chlorine, a pool would quickly become unsafe to swim in. Think of chlorine as the pool's immune system — it's constantly fighting off anything that could make swimmers sick.</p>
+        </div>
+        <div style="background:var(--color-bg); border-radius:var(--radius-lg); padding:var(--space-5); border:1px solid var(--border-color);">
+          <div style="font-weight:700; color:var(--color-dark); margin-bottom:var(--space-2);">What is alkalinity?</div>
+          <p style="font-size:var(--text-sm); margin:0;">Alkalinity is a measure of the water's ability to resist changes in pH. Think of it like a shock absorber. When alkalinity is at the right level, your pH stays stable — it doesn't jump around when you add chemicals. When alkalinity is low, pH bounces around wildly and becomes very hard to control. We'll cover the right range shortly.</p>
+        </div>
+      </div>
     </div>
 
     <!-- Section 1: Three Elements -->
     <div class="content-section" id="section-three" style="margin-bottom:var(--space-8);">
       <h2>1. The Three Elements of Pool Care</h2>
-      <p>Every healthy pool requires three things working together. Neglect any one and the others compensate less and less until the pool fails. Think of it as a three-legged stool.</p>
+      <p>A healthy pool needs three things working together at all times. If any one of them is missing or broken, the other two can't make up for it. Think of it like a three-legged stool — all three legs have to be there or the whole thing falls over.</p>
 
       <div class="interactive-section" style="margin:var(--space-6) 0;">
         <div class="interactive-section__title">🔄 Pool Care Wheel</div>
@@ -73,18 +98,18 @@
           <div id="wheel-panel-area">
             <div class="wheel-panel" id="wp-chemistry">
               <div class="wheel-panel__title">⚗️ Chemistry</div>
-              <p>Balanced chemistry keeps the water safe for swimmers and protects equipment. The key parameters are pH, total alkalinity, calcium hardness, free chlorine, and CYA. When chemistry is off, everything else suffers — cloudy water, algae, scale, corrosion.</p>
-              <p><strong>pH is the most important single parameter.</strong> It directly controls how effective your chlorine is. An ideal pH of 7.2–7.6 means roughly 50–60% of your chlorine is active. At pH 8.0, only ~20% is active — so you can have "enough" chlorine on paper but almost none doing work.</p>
+              <p>Chemistry is about keeping the water balanced. That means the right amount of chlorine to kill germs, the right pH so the water doesn't irritate skin or eyes, and several other measurements that we'll cover in this module.</p>
+              <p>When chemistry is off, you get cloudy water, algae, or water that damages the pool itself. <strong>pH is the most important number to get right</strong> — it controls whether your chlorine can actually do its job. At the right pH (7.2–7.6), about half your chlorine is active and working. At a high pH of 8.0, only about 20% is working. So even if the chlorine level looks fine on a test, bad pH can make it almost useless.</p>
             </div>
             <div class="wheel-panel" id="wp-circulation">
               <div class="wheel-panel__title">🔄 Circulation</div>
-              <p>The pump pulls water through the skimmer and main drain, pushes it through the filter, and returns it to the pool through the return jets. <strong>Without circulation, chemistry treatments can't reach the whole pool</strong>, dead zones form, and algae blooms in corners and steps.</p>
-              <p>Run the pump <strong>8–12 hours per day in summer</strong>. The timeclock controls this — check it is set correctly at every service stop. One full "turnover" of pool volume through the filter per day is the minimum goal.</p>
+              <p>Circulation means the water is constantly moving. The pump pulls water out of the pool, pushes it through the filter to clean it, then sends it back. Without that movement, chemicals can't spread evenly, and algae starts growing in the still corners.</p>
+              <p>The pump needs to run <strong>8–12 hours per day in summer</strong>. There's a timer (called a timeclock) that controls this. Part of your job is checking that it's set correctly at every visit.</p>
             </div>
             <div class="wheel-panel" id="wp-maintenance">
               <div class="wheel-panel__title">🧹 Maintenance</div>
-              <p>Physical maintenance removes debris, biofilm, and sediment that chemistry alone can't handle. Skimming removes floating leaves, brushing dislodges biofilm from walls before it becomes visible algae, and vacuuming removes settled debris from the floor.</p>
-              <p>Even chemically-balanced pools with good circulation will develop problems without regular mechanical cleaning. <strong>An ounce of brushing is worth a pound of algaecide.</strong></p>
+              <p>Maintenance is the physical cleaning — skimming leaves off the surface, brushing the walls and floor, and vacuuming up debris that settles on the bottom. Chemicals alone can't do this job.</p>
+              <p>Here's why brushing matters even when the pool looks clean: algae starts as a thin, invisible film on the pool walls before it turns green. Regular brushing breaks that film and stops algae before it ever becomes a problem. <strong>An ounce of brushing is worth a pound of algaecide.</strong></p>
             </div>
             <div id="wp-placeholder" style="text-align:center; color:var(--color-locked); padding:var(--space-8);">
               ← Select an element to explore it
@@ -97,7 +122,16 @@
     <!-- Section 2: Chemistry Ranges -->
     <div class="content-section" id="section-chemistry" style="margin-bottom:var(--space-8);">
       <h2>2. Key Chemistry Ranges</h2>
-      <p>You'll test these parameters at every service stop. Knowing the ranges cold — without looking them up — is essential to making quick, correct chemical decisions in the field.</p>
+      <p>At every service stop, you'll test the pool water and check five numbers. Each number tells you something different about the water's health. The goal is to keep each number inside its "ideal range." Too low or too high — and something goes wrong.</p>
+      <p>Here's a quick overview of what each chemical does, before we get to the numbers:</p>
+      <ul style="padding-left:var(--space-5); list-style:disc; margin-bottom:var(--space-5);">
+        <li><strong>pH</strong> — Controls how acidic or basic the water is. Directly affects how well chlorine works. This is the most important number.</li>
+        <li><strong>Total Alkalinity</strong> — The "shock absorber" for pH. Keeps pH from jumping around when chemicals are added.</li>
+        <li><strong>Calcium Hardness</strong> — Measures dissolved calcium in the water. Too little and the water eats away at plaster surfaces. Too much and it leaves white scale buildup.</li>
+        <li><strong>Free Chlorine (FC)</strong> — This is the amount of chlorine that's actually active and available to kill germs. The "free" part means it hasn't been used up yet.</li>
+        <li><strong>CYA (Stabilizer)</strong> — Protects chlorine from being destroyed by the sun. We'll cover CYA in detail in the next section.</li>
+      </ul>
+      <p>Now here are the target ranges. These are the numbers you need to memorize:</p>
 
       <div style="overflow-x:auto; margin-bottom:var(--space-5);">
         <table style="width:100%; border-collapse:collapse;">
@@ -151,15 +185,19 @@
 
     <!-- Section 3: CYA Deep Dive -->
     <div class="content-section" id="section-cya" style="margin-bottom:var(--space-8);">
-      <h2>3. CYA — The Double-Edged Stabilizer</h2>
-      <p>Cyanuric acid (CYA) is the stabilizer in trichlor tablets and most granular chlorine products. It forms a temporary bond with chlorine molecules, shielding them from UV light. Without CYA, outdoor chlorine evaporates in 2–4 hours of direct sun.</p>
+      <h2>3. CYA — Chlorine's Sunscreen</h2>
+      <p><strong>The problem:</strong> The sun destroys chlorine. UV rays from sunlight break down chlorine molecules and make them inactive. Without any protection, chlorine in an outdoor pool can disappear in just 2 to 4 hours of direct sun. That's expensive, and it leaves the pool unprotected.</p>
 
-      <p>But CYA accumulates. Every time you add trichlor tabs, you're adding more CYA. Over time, pools can reach 100–200 ppm — this is called <strong>over-stabilization</strong>. At these levels, the CYA holds the chlorine so tightly that it can't kill bacteria or algae effectively. The pool may "test fine" for chlorine but still turn green. There is no chemical that removes CYA — the only solution is to <strong>drain and dilute</strong>.</p>
+      <p><strong>The solution:</strong> CYA (short for cyanuric acid, also called a "stabilizer") acts like sunscreen for chlorine. It bonds loosely with chlorine molecules and shields them from UV rays, so they last much longer in the water. Most chlorine tablets already have CYA built into them.</p>
+
+      <p><strong>The problem with too much CYA:</strong> Here's where it gets tricky. CYA builds up over time. Every time you add chlorine tablets, you add a little more CYA to the water. Unlike chlorine, CYA doesn't get used up — it just accumulates. When CYA gets too high (above 80–100 ppm), it grabs onto the chlorine <em>so tightly</em> that the chlorine can't do its job anymore. The pool test might show "2 ppm chlorine," but almost none of it is active. The pool can turn green even though the numbers look fine on paper. This is called <strong>over-stabilization</strong>.</p>
+
+      <p><strong>The fix:</strong> There is no chemical that removes CYA. The only way to lower it is to drain some of the water out and refill with fresh water. This dilutes the CYA back to a safe level.</p>
 
       <!-- Knowledge check -->
       <div class="knowledge-check">
         <div class="knowledge-check__label">Quick Check</div>
-        <div class="knowledge-check__question">A pool CYA tests at 150 ppm. The best course of action is:</div>
+        <div class="knowledge-check__question">A pool's CYA tests at 150 ppm (the ideal range is 30–50 ppm). What should you do?</div>
         <div class="knowledge-check__choices">
           <button class="kc-choice" onclick="kcAnswer(this, false, 'There is no chemical that removes CYA. Adding shock cannot fix over-stabilization.')">Add extra shock to compensate</button>
           <button class="kc-choice" onclick="kcAnswer(this, false, 'Muriatic acid adjusts pH, not CYA. There\'s no chemical to remove CYA.')">Add muriatic acid to neutralize</button>
@@ -170,7 +208,7 @@
     </div>
 
     <!-- Interactive: Chemistry Sliders -->
-    <div class="interactive-section" style="margin-bottom:var(--space-8);">
+    <div class="interactive-section" id="m2-chem-sliders" style="margin-bottom:var(--space-8);">
       <div class="interactive-section__title">🎚️ Chemistry Range Practice</div>
       <div class="interactive-section__subtitle">Read the scenario, then drag the slider to show whether the reading is low, ideal, or high.</div>
 
@@ -213,7 +251,7 @@
       </div>
     </div>
 
-    <div style="text-align:center; margin-bottom:var(--space-8);">
+    <div id="m2-refcard" style="text-align:center; margin-bottom:var(--space-8);">
       <a href="../reference-cards/ref-card-2.html" class="btn btn-secondary" target="_blank">🖨️ Print Reference Card — Module 2</a>
     </div>
 
@@ -226,6 +264,7 @@
 <script src="../assets/js/navigation.js"></script>
 <script src="../assets/js/engine.js"></script>
 <script src="../assets/js/interactions/flip-cards.js"></script>
+<script src="../assets/js/pager.js"></script>
 
 <script>
   Progress.init();
@@ -251,6 +290,15 @@
       { front: 'What happens to chlorine effectiveness at pH 8.0?', back: 'Only ~20% is in active form — 5x less effective than at 7.4' },
     ],
   });
+
+  // Pagination
+  ModulePager.init([
+    { title: 'Key Terms',         elements: ['section-basics'] },
+    { title: 'Three Elements',    elements: ['section-three'] },
+    { title: 'Chemistry Ranges',  elements: ['section-chemistry', 'm2-chem-sliders'] },
+    { title: 'CYA Explained',     elements: ['section-cya'] },
+    { title: 'Review & Quiz',     elements: ['module2-flashcards', 'module-quiz', 'm2-refcard'] },
+  ]);
 
   // Pool Care Wheel logic
   var wheelVisited = new Set();
