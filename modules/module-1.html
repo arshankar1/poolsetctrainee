@@ -299,7 +299,7 @@
   function kcAnswer(btn, isCorrect, msg) {
     var parent = btn.closest('.knowledge-check');
     var btns = parent.querySelectorAll('.kc-choice');
-    btns.forEach(function(b) { b.disabled = true; b.classList.add(b === btn ? (isCorrect ? 'correct' : 'wrong') : ''); });
+    btns.forEach(function(b) { b.disabled = true; if (b === btn) b.classList.add(isCorrect ? 'correct' : 'wrong'); });
     var reveal = parent.querySelector('.kc-answer-reveal');
     if (reveal) { reveal.textContent = msg; reveal.classList.add('visible'); }
   }
