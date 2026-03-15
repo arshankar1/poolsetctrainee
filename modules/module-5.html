@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 5 — Equipment &amp; Filtration | Pools Etc Training</title>
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/quiz.css" />
+  <link rel="stylesheet" href="../assets/css/interactive.css" />
+  <link rel="stylesheet" href="../assets/css/print.css" />
+</head>
+<body>
+
+<div id="nav-root"></div>
+
+<div class="page-wrapper">
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="module-hero" style="background: linear-gradient(135deg, var(--module-5) 0%, #a84500 100%); border-radius: var(--radius-xl); padding: var(--space-10) var(--space-8); margin-bottom: var(--space-8); color:white; position:relative; overflow:hidden;">
+      <div style="position:relative; z-index:1;">
+        <div style="font-size:var(--text-sm); font-weight:600; text-transform:uppercase; letter-spacing:.08em; opacity:.75; margin-bottom:var(--space-2);">Module 5 of 6 · 2.5 hrs</div>
+        <h1 style="color:white; margin-bottom:var(--space-3); font-size:var(--text-3xl);">Equipment &amp; Filtration</h1>
+        <p style="opacity:.9; margin:0; max-width:56ch;">Identify every component on an equipment pad, understand the three filter types, know when and how to backwash, and recognize equipment problems before they become failures.</p>
+      </div>
+      <div style="position:absolute; right:-20px; top:-20px; font-size:120px; opacity:.08; pointer-events:none; z-index:0;">⚙️</div>
+    </div>
+
+    <!-- Learning Objectives -->
+    <div class="callout callout-info" style="margin-bottom:var(--space-8);">
+      <strong>By the end of this module you will be able to:</strong>
+      <ul style="margin-top:var(--space-3); padding-left:var(--space-5); list-style:disc;">
+        <li>Identify all major components on a residential equipment pad</li>
+        <li>Explain the three filter types and how to clean each one</li>
+        <li>Read a pressure gauge and know when to backwash</li>
+        <li>Recognize common equipment problems and how to document them</li>
+      </ul>
+    </div>
+
+    <!-- Section 1: Equipment Pad Components -->
+    <div class="content-section" id="section-components" style="margin-bottom:var(--space-8);">
+      <h2>1. Equipment Pad Components</h2>
+      <p>Every residential pool has an equipment pad — the area where all mechanical and filtration components are located. You'll inspect this at every service stop. Knowing what each part does lets you spot problems early.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:var(--space-4); margin:var(--space-5) 0;">
+        <div style="background:var(--color-bg); border-radius:var(--radius-lg); padding:var(--space-4); border:1px solid var(--border-color);">
+          <div style="font-weight:700; color:var(--color-dark); margin-bottom:var(--space-2);">🔄 Pump</div>
+          <div style="font-size:var(--text-sm);">The heart of the system. Pulls water from the pool via the skimmer and main drain, pushes it through the filter, and returns it via return jets. Listen for rattling (debris in impeller), grinding (bearing failure), or cavitation (air in lines).</div>
+        </div>
+        <div style="background:var(--color-bg); border-radius:var(--radius-lg); padding:var(--space-4); border:1px solid var(--border-color);">
+          <div style="font-weight:700; color:var(--color-dark); margin-bottom:var(--space-2);">🗑️ Strainer Basket</div>
+          <div style="font-size:var(--text-sm);">Located in the pump housing. Catches large debris before it reaches the impeller. Clean at every visit — a clogged basket starves the pump of water, causing it to run hot and fail prematurely.</div>
+        </div>
+        <div style="background:var(--color-bg); border-radius:var(--radius-lg); padding:var(--space-4); border:1px solid var(--border-color);">
+          <div style="font-weight:700; color:var(--color-dark); margin-bottom:var(--space-2);">🔵 Filter</div>
+          <div style="font-size:var(--text-sm);">Removes fine particles from the water. Three types: sand, D.E., and cartridge. Each cleaned differently. Monitor the pressure gauge — rising pressure means the filter needs cleaning.</div>
+        </div>
+        <div style="background:var(--color-bg); border-radius:var(--radius-lg); padding:var(--space-4); border:1px solid var(--border-color);">
+          <div style="font-weight:700; color:var(--color-dark); margin-bottom:var(--space-2);">📊 Pressure Gauge</div>
+          <div style="font-size:var(--text-sm);">Measures water pressure inside the filter. Note the "clean" baseline (typically 10–15 PSI). When pressure rises 8–10 PSI above baseline, it's time to clean the filter.</div>
+        </div>
+        <div style="background:var(--color-bg); border-radius:var(--radius-lg); padding:var(--space-4); border:1px solid var(--border-color);">
+          <div style="font-weight:700; color:var(--color-dark); margin-bottom:var(--space-2);">🔥 Heater</div>
+          <div style="font-size:var(--text-sm);">Heats pool water for comfort. Gas or heat pump. Check for unusual noises, error codes on the display, and proper ignition. Low water flow through the heater can cause damage.</div>
+        </div>
+        <div style="background:var(--color-bg); border-radius:var(--radius-lg); padding:var(--space-4); border:1px solid var(--border-color);">
+          <div style="font-weight:700; color:var(--color-dark); margin-bottom:var(--space-2);">⏰ Timeclock</div>
+          <div style="font-size:var(--text-sm);">Controls when the pump runs. Verify the on/off pins are set correctly at every visit — an incorrect timeclock setting is a common cause of water chemistry failures.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Three Filter Types -->
+    <div class="content-section" id="section-filters" style="margin-bottom:var(--space-8);">
+      <h2>2. The Three Filter Types</h2>
+      <div style="margin:var(--space-5) 0;">
+        <img src="../assets/img/filter-types.svg" alt="Sand, D.E., and Cartridge filter comparison diagram" style="width:100%; max-width:600px; border-radius:var(--radius-lg); border:1px solid var(--border-color);" />
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; margin-bottom:var(--space-5);">
+          <thead>
+            <tr style="background:var(--color-dark); color:white;">
+              <th style="padding:var(--space-3) var(--space-4); text-align:left;">Filter Type</th>
+              <th style="padding:var(--space-3) var(--space-4); text-align:left;">Filtration</th>
+              <th style="padding:var(--space-3) var(--space-4); text-align:left;">Cleaning Method</th>
+              <th style="padding:var(--space-3) var(--space-4); text-align:left;">After Cleaning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:var(--space-3) var(--space-4); font-weight:600;">Sand</td>
+              <td style="padding:var(--space-3) var(--space-4);">~20 microns</td>
+              <td style="padding:var(--space-3) var(--space-4);">Backwash, then Rinse</td>
+              <td style="padding:var(--space-3) var(--space-4);">Return to Filter position</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color); background:var(--color-bg);">
+              <td style="padding:var(--space-3) var(--space-4); font-weight:600;">D.E.</td>
+              <td style="padding:var(--space-3) var(--space-4);">~2 microns (finest)</td>
+              <td style="padding:var(--space-3) var(--space-4);">Backwash, then add fresh D.E.</td>
+              <td style="padding:var(--space-3) var(--space-4);">Add D.E. through skimmer</td>
+            </tr>
+            <tr>
+              <td style="padding:var(--space-3) var(--space-4); font-weight:600;">Cartridge</td>
+              <td style="padding:var(--space-3) var(--space-4);">~10 microns</td>
+              <td style="padding:var(--space-3) var(--space-4);">Remove, rinse with hose</td>
+              <td style="padding:var(--space-3) var(--space-4);">Reinstall, no backwash</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-danger">
+        <strong>⛔ Never backwash a cartridge filter.</strong> There is no backwash valve on cartridge filters. Remove the element, rinse it from top to bottom between the pleats with a garden hose. Soak in filter cleaner solution monthly or quarterly.
+      </div>
+    </div>
+
+    <!-- Section 3: Backwash Decision -->
+    <div class="content-section" id="section-backwash" style="margin-bottom:var(--space-8);">
+      <h2>3. When to Backwash</h2>
+      <p>Backwash when the pressure gauge reads <strong>8–10 PSI above the clean baseline</strong>. Most filters start at 10–15 PSI when clean. At 20–25 PSI, flow is severely restricted and the filter is no longer cleaning the water effectively.</p>
+
+      <h3>Backwash Process (Sand Filter)</h3>
+      <ol style="padding-left:var(--space-6); margin-bottom:var(--space-4);">
+        <li style="margin-bottom:var(--space-2);">Turn pump OFF</li>
+        <li style="margin-bottom:var(--space-2);">Turn multiport valve to <strong>BACKWASH</strong></li>
+        <li style="margin-bottom:var(--space-2);">Turn pump ON — run until waste water runs clear (30–90 seconds)</li>
+        <li style="margin-bottom:var(--space-2);">Turn pump OFF again</li>
+        <li style="margin-bottom:var(--space-2);">Turn valve to <strong>RINSE</strong> — run for 15–30 seconds</li>
+        <li style="margin-bottom:var(--space-2);">Turn pump OFF</li>
+        <li style="margin-bottom:var(--space-2);">Turn valve back to <strong>FILTER</strong></li>
+        <li>Turn pump ON — check new pressure reading (should be back to baseline)</li>
+      </ol>
+
+      <div class="callout callout-warning">
+        <strong>Always run Rinse after backwashing.</strong> Skipping the Rinse step sends disturbed sand into the pool, causing cloudiness. 15–30 seconds is enough.
+      </div>
+    </div>
+
+    <!-- Interactive: Equipment Diagram -->
+    <div class="interactive-section" style="margin-bottom:var(--space-8);">
+      <div class="interactive-section__title">🗺️ Clickable Equipment Pad</div>
+      <div class="interactive-section__subtitle">Click each numbered hotspot to learn about that component.</div>
+      <div id="equipment-diagram"></div>
+    </div>
+
+    <!-- Interactive: Backwash Decision Tool -->
+    <div class="interactive-section" style="margin-bottom:var(--space-8);">
+      <div class="interactive-section__title">🔧 Backwash Decision Tool</div>
+      <div class="interactive-section__subtitle">Enter the pressure readings and filter type to get a recommendation.</div>
+      <div class="backwash-tool">
+        <div class="backwash-fields">
+          <div class="calc-field">
+            <label for="bw-normal">Normal operating pressure (PSI)</label>
+            <input type="number" id="bw-normal" value="12" min="5" max="30" step="1"/>
+          </div>
+          <div class="calc-field">
+            <label for="bw-current">Current pressure reading (PSI)</label>
+            <input type="number" id="bw-current" value="12" min="5" max="40" step="1"/>
+          </div>
+          <div class="calc-field">
+            <label for="bw-type">Filter type</label>
+            <select id="bw-type">
+              <option value="sand">Sand filter</option>
+              <option value="de">D.E. filter</option>
+              <option value="cartridge">Cartridge filter</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="checkBackwash()">Get Recommendation</button>
+        <div class="backwash-result" id="bw-result"></div>
+      </div>
+    </div>
+
+    <!-- Flashcards -->
+    <div id="module5-flashcards"></div>
+
+    <!-- Module Quiz -->
+    <div class="card" id="module-quiz" style="margin-bottom:var(--space-8);">
+      <div class="card-body">
+        <h2 style="margin-bottom:var(--space-2);">Module 5 Quiz</h2>
+        <p style="margin-bottom:var(--space-5); color:var(--color-locked);">10 questions · 80% to pass (8/10)</p>
+        <div id="quiz-container"></div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-bottom:var(--space-8);">
+      <a href="../reference-cards/ref-card-5.html" class="btn btn-secondary" target="_blank">🖨️ Print Reference Card — Module 5</a>
+    </div>
+
+  </div>
+</div>
+
+<div id="footer-nav-root"></div>
+
+<script src="../assets/js/progress.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/engine.js"></script>
+<script src="../assets/js/interactions/diagram.js"></script>
+<script src="../assets/js/interactions/flip-cards.js"></script>
+
+<script>
+  Progress.init();
+  Navigation.renderHeader({ moduleNumber: 5, moduleTitle: 'Equipment & Filtration' });
+  Navigation.renderFooterNav({
+    prevUrl: 'module-4.html',
+    nextUrl: 'module-6.html',
+    quizContainerId: 'module-quiz',
+    quizAlreadyPassed: Progress.getStatus('module5').quizPassed,
+  });
+
+  QuizEngine.render('module5', 'quiz-container');
+
+  Diagram.create({
+    containerId: 'equipment-diagram',
+    imgSrc: '../assets/img/pool-diagram.svg',
+    infoPanelId: 'equip-info',
+    hotspots: [
+      {
+        id: 'pump',
+        x: '21%', y: '47%',
+        label: 'Pump',
+        body: 'The pump is the heart of the circulation system. It creates the flow that pulls water from the pool, pushes it through the filter, and returns it clean. Run it 8–12 hours/day in summer.',
+        fact: '🔑 If you hear grinding or screeching, the pump impeller may be clogged or bearings may be failing — document and report.',
+      },
+      {
+        id: 'strainer',
+        x: '21%', y: '67%',
+        label: 'Strainer Basket',
+        body: 'The strainer basket sits inside the pump housing and catches large debris (leaves, twigs, bugs) before it can damage the pump impeller. Clean at every service visit.',
+        fact: '🔑 A clogged strainer basket restricts water flow to the pump, causing it to run hot, cavitate, or fail.',
+      },
+      {
+        id: 'filter',
+        x: '45%', y: '47%',
+        label: 'Filter',
+        body: 'The filter removes fine particles from the water. Sand filters backwash to clean. D.E. filters backwash and recharge. Cartridge filters are removed and rinsed — never backwash a cartridge filter.',
+        fact: '🔑 Always note the "clean" baseline pressure. Backwash when pressure rises 8–10 PSI above baseline.',
+      },
+      {
+        id: 'backwash',
+        x: '45%', y: '67%',
+        label: 'Backwash/Multiport Valve',
+        body: 'Found on sand and D.E. filters. Has positions: Filter, Backwash, Rinse, Waste, Recirculate, Closed. Always turn pump OFF before moving this valve — moving it under pressure damages the valve seat.',
+        fact: '🔑 Never rotate the multiport valve while the pump is running.',
+      },
+      {
+        id: 'gauge',
+        x: '58%', y: '33%',
+        label: 'Pressure Gauge',
+        body: 'Measures water pressure inside the filter in PSI. A clean filter typically reads 10–15 PSI. Rising pressure indicates a dirty filter. Falling pressure can mean a clogged impeller or closed valve.',
+        fact: '🔑 Note and record the clean baseline pressure at each service stop. Log anomalies.',
+      },
+      {
+        id: 'heater',
+        x: '72%', y: '52%',
+        label: 'Heater',
+        body: 'Gas or heat pump heater that warms the pool water. Check for error codes, unusual sounds, or pilot ignition issues. Low flow through a heater triggers a high-limit shutoff — usually means a clogged filter or partially closed valve.',
+        fact: '🔑 Never run the heater without adequate water flow — it will trip the high-limit switch or cause heat exchanger damage.',
+      },
+      {
+        id: 'timeclock',
+        x: '82%', y: '32%',
+        label: 'Timeclock',
+        body: 'Controls when the pump (and heater) run. The on/off pins set the daily schedule. Verify at every visit that times are set correctly — typical setting is 8–10 AM to 6–8 PM in summer.',
+        fact: '🔑 An incorrectly set timeclock is one of the most common causes of chronic chemistry problems. Always verify.',
+      },
+    ],
+  });
+
+  // Add the info panel manually to the diagram layout (it gets created by Diagram.create)
+  // We need to ensure the panel container is there
+  document.querySelector('#equipment-diagram .diagram-layout').insertAdjacentHTML('beforeend', '');
+
+  FlipCards.create({
+    containerId: 'module5-flashcards',
+    cards: [
+      { front: 'When should you backwash a sand filter?', back: 'When pressure is 8–10 PSI above the clean baseline.' },
+      { front: 'How do you clean a cartridge filter?', back: 'Remove and rinse with a garden hose — NO backwash.' },
+      { front: 'Which filter type provides the finest filtration?', back: 'D.E. filter — filters to about 2 microns.' },
+      { front: 'What step must come AFTER backwashing a sand filter?', back: 'Rinse — run for 15–30 seconds to resettle sand before returning to Filter position.' },
+      { front: 'What does a pump strainer basket do?', back: 'Catches large debris before it reaches and damages the pump impeller.' },
+      { front: 'After backwashing a D.E. filter, what must you do?', back: 'Add fresh D.E. through the skimmer to re-coat the internal grids.' },
+    ],
+  });
+
+  function checkBackwash() {
+    var normal  = parseFloat(document.getElementById('bw-normal').value);
+    var current = parseFloat(document.getElementById('bw-current').value);
+    var type    = document.getElementById('bw-type').value;
+    var result  = document.getElementById('bw-result');
+    var diff    = current - normal;
+
+    result.classList.add('visible');
+    result.classList.remove('yes', 'no');
+
+    if (type === 'cartridge') {
+      if (diff >= 8) {
+        result.classList.add('yes');
+        result.innerHTML = '🔧 <strong>Clean the cartridge.</strong> Pressure is ' + diff.toFixed(0) + ' PSI above normal. Remove the cartridge and rinse with a garden hose. Remember: cartridges cannot be backwashed.';
+      } else {
+        result.classList.add('no');
+        result.innerHTML = '✅ <strong>No cleaning needed yet.</strong> Pressure is only ' + diff.toFixed(0) + ' PSI above normal. Monitor and clean when it reaches 8–10 PSI above baseline.';
+      }
+    } else {
+      var action = type === 'de' ? 'Backwash, then recharge with fresh D.E. through the skimmer.' : 'Backwash, then run Rinse for 15–30 seconds before returning to Filter.';
+      if (diff >= 8) {
+        result.classList.add('yes');
+        result.innerHTML = '⚠️ <strong>Backwash recommended.</strong> Pressure is ' + diff.toFixed(0) + ' PSI above normal. ' + action;
+      } else {
+        result.classList.add('no');
+        result.innerHTML = '✅ <strong>No backwash needed yet.</strong> Pressure is ' + diff.toFixed(0) + ' PSI above normal. Backwash when difference reaches 8–10 PSI.';
+      }
+    }
+  }
+</script>
+</body>
+</html>

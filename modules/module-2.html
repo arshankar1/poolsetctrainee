@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 2 — Pool Fundamentals | Pools Etc Training</title>
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/quiz.css" />
+  <link rel="stylesheet" href="../assets/css/interactive.css" />
+  <link rel="stylesheet" href="../assets/css/print.css" />
+</head>
+<body>
+
+<div id="nav-root"></div>
+
+<div class="page-wrapper">
+  <div class="container">
+
+    <!-- Hero Banner -->
+    <div class="module-hero" style="background: linear-gradient(135deg, var(--module-2) 0%, #006f78 100%); border-radius: var(--radius-xl); padding: var(--space-10) var(--space-8); margin-bottom: var(--space-8); color:white; position:relative; overflow:hidden;">
+      <div style="position:relative; z-index:1;">
+        <div style="font-size:var(--text-sm); font-weight:600; text-transform:uppercase; letter-spacing:.08em; opacity:.75; margin-bottom:var(--space-2);">Module 2 of 6 · 1.1 hrs</div>
+        <h1 style="color:white; margin-bottom:var(--space-3); font-size:var(--text-3xl);">Pool Fundamentals</h1>
+        <p style="opacity:.9; margin:0; max-width:56ch;">Master the three elements of pool care, understand how water chemistry works, and learn the ideal ranges for every key parameter you'll test at every service stop.</p>
+      </div>
+      <div style="position:absolute; right:-20px; top:-20px; font-size:120px; opacity:.08; pointer-events:none; z-index:0;">🏊</div>
+    </div>
+
+    <!-- Learning Objectives -->
+    <div class="callout callout-info" style="margin-bottom: var(--space-8);">
+      <strong>By the end of this module you will be able to:</strong>
+      <ul style="margin-top:var(--space-3); padding-left:var(--space-5); list-style:disc;">
+        <li>Explain the three elements of pool care and why each matters</li>
+        <li>State the ideal range for pH, alkalinity, calcium hardness, and CYA</li>
+        <li>Describe what CYA does and why over-stabilization is a problem</li>
+        <li>Explain why pH matters more than any other single parameter</li>
+      </ul>
+    </div>
+
+    <!-- Section 1: Three Elements -->
+    <div class="content-section" id="section-three" style="margin-bottom:var(--space-8);">
+      <h2>1. The Three Elements of Pool Care</h2>
+      <p>Every healthy pool requires three things working together. Neglect any one and the others compensate less and less until the pool fails. Think of it as a three-legged stool.</p>
+
+      <div class="interactive-section" style="margin:var(--space-6) 0;">
+        <div class="interactive-section__title">🔄 Pool Care Wheel</div>
+        <div class="interactive-section__subtitle">Click each element to explore it. You must visit all three before the quiz button unlocks.</div>
+        <div class="wheel-layout">
+          <div class="wheel-segments" id="wheel-segments">
+            <button class="wheel-segment-btn" id="wseg-chemistry" onclick="showWheel('chemistry')">
+              <span class="wheel-segment-icon">⚗️</span>
+              <div>
+                <div class="wheel-segment-label">Chemistry</div>
+                <div style="font-size:var(--text-xs); color:var(--color-locked); margin-top:2px;">pH, alkalinity, chlorine, CYA…</div>
+              </div>
+            </button>
+            <button class="wheel-segment-btn" id="wseg-circulation" onclick="showWheel('circulation')">
+              <span class="wheel-segment-icon">🔄</span>
+              <div>
+                <div class="wheel-segment-label">Circulation</div>
+                <div style="font-size:var(--text-xs); color:var(--color-locked); margin-top:2px;">Pump, filter, returns, flow rate…</div>
+              </div>
+            </button>
+            <button class="wheel-segment-btn" id="wseg-maintenance" onclick="showWheel('maintenance')">
+              <span class="wheel-segment-icon">🧹</span>
+              <div>
+                <div class="wheel-segment-label">Maintenance</div>
+                <div style="font-size:var(--text-xs); color:var(--color-locked); margin-top:2px;">Brushing, vacuuming, skimming…</div>
+              </div>
+            </button>
+          </div>
+          <div id="wheel-panel-area">
+            <div class="wheel-panel" id="wp-chemistry">
+              <div class="wheel-panel__title">⚗️ Chemistry</div>
+              <p>Balanced chemistry keeps the water safe for swimmers and protects equipment. The key parameters are pH, total alkalinity, calcium hardness, free chlorine, and CYA. When chemistry is off, everything else suffers — cloudy water, algae, scale, corrosion.</p>
+              <p><strong>pH is the most important single parameter.</strong> It directly controls how effective your chlorine is. An ideal pH of 7.2–7.6 means roughly 50–60% of your chlorine is active. At pH 8.0, only ~20% is active — so you can have "enough" chlorine on paper but almost none doing work.</p>
+            </div>
+            <div class="wheel-panel" id="wp-circulation">
+              <div class="wheel-panel__title">🔄 Circulation</div>
+              <p>The pump pulls water through the skimmer and main drain, pushes it through the filter, and returns it to the pool through the return jets. <strong>Without circulation, chemistry treatments can't reach the whole pool</strong>, dead zones form, and algae blooms in corners and steps.</p>
+              <p>Run the pump <strong>8–12 hours per day in summer</strong>. The timeclock controls this — check it is set correctly at every service stop. One full "turnover" of pool volume through the filter per day is the minimum goal.</p>
+            </div>
+            <div class="wheel-panel" id="wp-maintenance">
+              <div class="wheel-panel__title">🧹 Maintenance</div>
+              <p>Physical maintenance removes debris, biofilm, and sediment that chemistry alone can't handle. Skimming removes floating leaves, brushing dislodges biofilm from walls before it becomes visible algae, and vacuuming removes settled debris from the floor.</p>
+              <p>Even chemically-balanced pools with good circulation will develop problems without regular mechanical cleaning. <strong>An ounce of brushing is worth a pound of algaecide.</strong></p>
+            </div>
+            <div id="wp-placeholder" style="text-align:center; color:var(--color-locked); padding:var(--space-8);">
+              ← Select an element to explore it
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Chemistry Ranges -->
+    <div class="content-section" id="section-chemistry" style="margin-bottom:var(--space-8);">
+      <h2>2. Key Chemistry Ranges</h2>
+      <p>You'll test these parameters at every service stop. Knowing the ranges cold — without looking them up — is essential to making quick, correct chemical decisions in the field.</p>
+
+      <div style="overflow-x:auto; margin-bottom:var(--space-5);">
+        <table style="width:100%; border-collapse:collapse;">
+          <thead>
+            <tr style="background:var(--color-dark); color:white;">
+              <th style="padding:var(--space-3) var(--space-4); text-align:left;">Parameter</th>
+              <th style="padding:var(--space-3) var(--space-4); text-align:left;">Ideal Range</th>
+              <th style="padding:var(--space-3) var(--space-4); text-align:left;">Too Low</th>
+              <th style="padding:var(--space-3) var(--space-4); text-align:left;">Too High</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:var(--space-3) var(--space-4); font-weight:600;">pH</td>
+              <td style="padding:var(--space-3) var(--space-4); color:var(--color-success); font-weight:600;">7.2 – 7.6</td>
+              <td style="padding:var(--space-3) var(--space-4); color:var(--color-danger);">Corrosive, eye irritation</td>
+              <td style="padding:var(--space-3) var(--space-4); color:var(--color-warning);">Kills chlorine, scaling</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color); background:var(--color-bg);">
+              <td style="padding:var(--space-3) var(--space-4); font-weight:600;">Total Alkalinity</td>
+              <td style="padding:var(--space-3) var(--space-4); color:var(--color-success); font-weight:600;">80 – 120 ppm</td>
+              <td style="padding:var(--space-3) var(--space-4); color:var(--color-danger);">pH bounce, corrosion</td>
+              <td style="padding:var(--space-3) var(--space-4); color:var(--color-warning);">Cloudy water, scaling</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:var(--space-3) var(--space-4); font-weight:600;">Calcium Hardness</td>
+              <td style="padding:var(--space-3) var(--space-4); color:var(--color-success); font-weight:600;">200 – 400 ppm</td>
+              <td style="padding:var(--space-3) var(--space-4); color:var(--color-danger);">Plaster etching</td>
+              <td style="padding:var(--space-3) var(--space-4); color:var(--color-warning);">Scaling on surfaces</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color); background:var(--color-bg);">
+              <td style="padding:var(--space-3) var(--space-4); font-weight:600;">Free Chlorine</td>
+              <td style="padding:var(--space-3) var(--space-4); color:var(--color-success); font-weight:600;">1 – 3 ppm</td>
+              <td style="padding:var(--space-3) var(--space-4); color:var(--color-danger);">Algae, bacteria, illness</td>
+              <td style="padding:var(--space-3) var(--space-4); color:var(--color-warning);">Bleaches swimwear, irritates</td>
+            </tr>
+            <tr>
+              <td style="padding:var(--space-3) var(--space-4); font-weight:600;">CYA (Stabilizer)</td>
+              <td style="padding:var(--space-3) var(--space-4); color:var(--color-success); font-weight:600;">30 – 50 ppm</td>
+              <td style="padding:var(--space-3) var(--space-4); color:var(--color-danger);">Chlorine burns off in sun</td>
+              <td style="padding:var(--space-3) var(--space-4); color:var(--color-warning);">Chlorine lock, ineffective FC</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-info">
+        <strong>Memory trick:</strong> "pH is mood, alkalinity is the bodyguard." When alkalinity is right, pH stays stable. When alkalinity is low, pH bounces around wildly with every chemical addition — like a mood without a bodyguard.
+      </div>
+    </div>
+
+    <!-- Section 3: CYA Deep Dive -->
+    <div class="content-section" id="section-cya" style="margin-bottom:var(--space-8);">
+      <h2>3. CYA — The Double-Edged Stabilizer</h2>
+      <p>Cyanuric acid (CYA) is the stabilizer in trichlor tablets and most granular chlorine products. It forms a temporary bond with chlorine molecules, shielding them from UV light. Without CYA, outdoor chlorine evaporates in 2–4 hours of direct sun.</p>
+
+      <p>But CYA accumulates. Every time you add trichlor tabs, you're adding more CYA. Over time, pools can reach 100–200 ppm — this is called <strong>over-stabilization</strong>. At these levels, the CYA holds the chlorine so tightly that it can't kill bacteria or algae effectively. The pool may "test fine" for chlorine but still turn green. There is no chemical that removes CYA — the only solution is to <strong>drain and dilute</strong>.</p>
+
+      <!-- Knowledge check -->
+      <div class="knowledge-check">
+        <div class="knowledge-check__label">Quick Check</div>
+        <div class="knowledge-check__question">A pool CYA tests at 150 ppm. The best course of action is:</div>
+        <div class="knowledge-check__choices">
+          <button class="kc-choice" onclick="kcAnswer(this, false, 'There is no chemical that removes CYA. Adding shock cannot fix over-stabilization.')">Add extra shock to compensate</button>
+          <button class="kc-choice" onclick="kcAnswer(this, false, 'Muriatic acid adjusts pH, not CYA. There\'s no chemical to remove CYA.')">Add muriatic acid to neutralize</button>
+          <button class="kc-choice" onclick="kcAnswer(this, true, '✅ Correct! The only way to lower CYA is to drain some water and refill with fresh. CYA cannot be chemically removed.')">Partially drain and refill with fresh water</button>
+          <button class="kc-choice" onclick="kcAnswer(this, false, 'Running the pump does not remove or reduce CYA.')">Run the pump 24 hours to break it down</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive: Chemistry Sliders -->
+    <div class="interactive-section" style="margin-bottom:var(--space-8);">
+      <div class="interactive-section__title">🎚️ Chemistry Range Practice</div>
+      <div class="interactive-section__subtitle">Read the scenario, then drag the slider to show whether the reading is low, ideal, or high.</div>
+
+      <div class="slider-scenario">
+        <div class="slider-scenario__description">📋 Scenario: You test a pool and the pH reads <strong>8.1</strong>. The ideal range is 7.2–7.6. Where does this reading fall?</div>
+        <div class="range-labels">
+          <span>Too Low</span><span>Ideal Zone (7.2–7.6)</span><span>Too High</span>
+        </div>
+        <input type="range" class="range-track" id="ph-slider" min="1" max="10" value="5"
+          oninput="updateSlider('ph', this.value)"
+          aria-label="pH slider"/>
+        <div class="range-value-display" id="ph-display">midpoint</div>
+        <button class="btn btn-primary btn-sm" style="margin-top:var(--space-3);" onclick="checkSlider('ph', 8, 'TOO HIGH — at 8.1 chlorine is only about 20% effective. Add muriatic acid to lower pH back to 7.2–7.6.')">Check Answer</button>
+        <div class="slider-feedback" id="ph-feedback"></div>
+      </div>
+
+      <div class="slider-scenario" style="margin-top:var(--space-5);">
+        <div class="slider-scenario__description">📋 Scenario: Alkalinity tests at <strong>55 ppm</strong>. The ideal range is 80–120 ppm. Where does this fall?</div>
+        <div class="range-labels">
+          <span>Too Low (below 80)</span><span>Ideal (80–120)</span><span>Too High (above 120)</span>
+        </div>
+        <input type="range" class="range-track" id="alk-slider" min="1" max="10" value="5"
+          oninput="updateSlider('alk', this.value)"
+          aria-label="Alkalinity slider"/>
+        <div class="range-value-display" id="alk-display">midpoint</div>
+        <button class="btn btn-primary btn-sm" style="margin-top:var(--space-3);" onclick="checkSlider('alk', 3, 'TOO LOW — at 55 ppm alkalinity is low and pH will bounce. Add sodium bicarbonate (baking soda) to raise alkalinity to 80–120 ppm.')">Check Answer</button>
+        <div class="slider-feedback" id="alk-feedback"></div>
+      </div>
+    </div>
+
+    <!-- Flashcard Deck -->
+    <div id="module2-flashcards"></div>
+
+    <!-- Module Quiz -->
+    <div class="card" id="module-quiz" style="margin-bottom:var(--space-8);">
+      <div class="card-body">
+        <h2 style="margin-bottom:var(--space-2);">Module 2 Quiz</h2>
+        <p style="margin-bottom:var(--space-5); color:var(--color-locked);">10 questions · 80% to pass (8/10)</p>
+        <div id="quiz-container"></div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-bottom:var(--space-8);">
+      <a href="../reference-cards/ref-card-2.html" class="btn btn-secondary" target="_blank">🖨️ Print Reference Card — Module 2</a>
+    </div>
+
+  </div>
+</div>
+
+<div id="footer-nav-root"></div>
+
+<script src="../assets/js/progress.js"></script>
+<script src="../assets/js/navigation.js"></script>
+<script src="../assets/js/engine.js"></script>
+<script src="../assets/js/interactions/flip-cards.js"></script>
+
+<script>
+  Progress.init();
+  Navigation.renderHeader({ moduleNumber: 2, moduleTitle: 'Pool Fundamentals' });
+  Navigation.renderFooterNav({
+    prevUrl: 'module-1.html',
+    nextUrl: 'module-3.html',
+    quizContainerId: 'module-quiz',
+    quizAlreadyPassed: Progress.getStatus('module2').quizPassed,
+  });
+
+  QuizEngine.render('module2', 'quiz-container');
+
+  FlipCards.create({
+    containerId: 'module2-flashcards',
+    cards: [
+      { front: 'What are the three elements of pool care?', back: 'Chemistry · Circulation · Maintenance' },
+      { front: 'Ideal pH range for a pool?', back: '7.2 – 7.6' },
+      { front: 'Ideal total alkalinity?', back: '80 – 120 ppm' },
+      { front: 'What does CYA do?', back: 'Protects chlorine from UV degradation by sunlight (stabilizer)' },
+      { front: '"pH is mood, alkalinity is ___"', back: '"The bodyguard" — alkalinity buffers pH and prevents bouncing' },
+      { front: 'Ideal calcium hardness for plaster pools?', back: '200 – 400 ppm' },
+      { front: 'What happens to chlorine effectiveness at pH 8.0?', back: 'Only ~20% is in active form — 5x less effective than at 7.4' },
+    ],
+  });
+
+  // Pool Care Wheel logic
+  var wheelVisited = new Set();
+  function showWheel(segment) {
+    document.querySelectorAll('.wheel-panel').forEach(function(p) { p.classList.remove('visible'); });
+    document.querySelectorAll('.wheel-segment-btn').forEach(function(b) { b.classList.remove('active'); });
+    document.getElementById('wp-placeholder').style.display = 'none';
+    document.getElementById('wp-' + segment).classList.add('visible');
+    document.getElementById('wseg-' + segment).classList.add('active');
+    document.getElementById('wseg-' + segment).classList.add('visited');
+    wheelVisited.add(segment);
+  }
+
+  // Slider logic
+  var sliderValues = { ph: 5, alk: 5 };
+  function updateSlider(id, val) {
+    sliderValues[id] = parseInt(val);
+    var labels = { 1:'Very Low', 2:'Low', 3:'Low', 4:'Borderline Low', 5:'Midpoint', 6:'Borderline High', 7:'High', 8:'High', 9:'Very High', 10:'Extreme' };
+    document.getElementById(id + '-display').textContent = 'Position: ' + labels[val];
+    document.getElementById(id + '-feedback').classList.remove('visible');
+  }
+
+  function checkSlider(id, tooHighThreshold, explanation) {
+    var val = sliderValues[id];
+    var fb = document.getElementById(id + '-feedback');
+    fb.classList.add('visible');
+    fb.classList.remove('good', 'bad');
+    if (val >= tooHighThreshold) {
+      fb.classList.add('bad');
+      fb.textContent = explanation;
+    } else if (val >= 4 && val <= 7) {
+      fb.classList.add('bad');
+      fb.textContent = explanation;
+    } else {
+      fb.classList.add('bad');
+      fb.textContent = explanation;
+    }
+  }
+
+  function kcAnswer(btn, isCorrect, msg) {
+    var parent = btn.closest('.knowledge-check');
+    var btns = parent.querySelectorAll('.kc-choice');
+    btns.forEach(function(b) { b.disabled = true; if (b === btn) b.classList.add(isCorrect ? 'correct' : 'wrong'); });
+    var reveal = parent.querySelector('.kc-answer-reveal');
+    if (reveal) { reveal.textContent = msg; reveal.classList.add('visible'); }
+  }
+</script>
+</body>
+</html>

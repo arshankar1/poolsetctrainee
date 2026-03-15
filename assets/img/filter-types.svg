@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" role="img" aria-label="Three types of pool filters: sand, DE, and cartridge">
+  <defs>
+    <linearGradient id="sandGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c4a265"/>
+      <stop offset="100%" stop-color="#a07840"/>
+    </linearGradient>
+    <linearGradient id="deGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6aabbf"/>
+      <stop offset="100%" stop-color="#3d8fa8"/>
+    </linearGradient>
+    <linearGradient id="cartGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7b6ea8"/>
+      <stop offset="100%" stop-color="#5c518a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="300" fill="#f0f4f8" rx="12"/>
+
+  <!-- SAND FILTER -->
+  <g>
+    <text x="100" y="28" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#2D3142">Sand Filter</text>
+    <!-- tank body -->
+    <ellipse cx="100" cy="75" rx="48" ry="16" fill="#b8923e"/>
+    <rect x="52" y="75" width="96" height="110" fill="url(#sandGrad)"/>
+    <ellipse cx="100" cy="185" rx="48" ry="16" fill="#886020"/>
+    <!-- sand texture -->
+    <circle cx="80" cy="110" r="3" fill="#b8923e" opacity="0.6"/>
+    <circle cx="100" cy="125" r="4" fill="#b8923e" opacity="0.5"/>
+    <circle cx="120" cy="108" r="3" fill="#b8923e" opacity="0.6"/>
+    <circle cx="88" cy="145" r="3" fill="#b8923e" opacity="0.5"/>
+    <circle cx="112" cy="140" r="4" fill="#b8923e" opacity="0.6"/>
+    <!-- lateral pipe at bottom -->
+    <rect x="72" y="172" width="56" height="8" fill="#8a6a2a" rx="2"/>
+    <!-- top valve -->
+    <rect x="82" y="59" width="36" height="16" fill="#666" rx="4"/>
+    <circle cx="100" cy="67" r="6" fill="#888"/>
+    <!-- Backwash port -->
+    <rect x="148" y="128" width="20" height="8" fill="#666" rx="2"/>
+    <!-- drain -->
+    <rect x="90" y="201" width="20" height="18" fill="#666" rx="2"/>
+    <!-- media label -->
+    <text x="100" y="165" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="white" font-weight="600" opacity="0.85">Sand Media</text>
+    <!-- info below -->
+    <text x="100" y="240" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#4a5068">Backwash to clean</text>
+    <text x="100" y="255" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#4a5068">Filters to ~20 microns</text>
+    <text x="100" y="272" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#4a5068">Replace sand every 5 yrs</text>
+  </g>
+
+  <!-- DE FILTER -->
+  <g>
+    <text x="300" y="28" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#2D3142">D.E. Filter</text>
+    <!-- tank body (vertical) -->
+    <ellipse cx="300" cy="75" rx="50" ry="17" fill="#3d8fa8"/>
+    <rect x="250" y="75" width="100" height="115" fill="url(#deGrad)"/>
+    <ellipse cx="300" cy="190" rx="50" ry="17" fill="#2a7090"/>
+    <!-- internal grids/fingers -->
+    <rect x="270" y="90" width="6" height="85" fill="white" opacity="0.4" rx="2"/>
+    <rect x="284" y="90" width="6" height="85" fill="white" opacity="0.4" rx="2"/>
+    <rect x="298" y="90" width="6" height="85" fill="white" opacity="0.4" rx="2"/>
+    <rect x="312" y="90" width="6" height="85" fill="white" opacity="0.4" rx="2"/>
+    <rect x="326" y="90" width="6" height="85" fill="white" opacity="0.4" rx="2"/>
+    <!-- top manifold valve -->
+    <rect x="280" y="58" width="40" height="17" fill="#666" rx="4"/>
+    <circle cx="300" cy="67" r="6" fill="#888"/>
+    <!-- drain/backwash port -->
+    <rect x="350" y="125" width="20" height="8" fill="#666" rx="2"/>
+    <text x="300" y="165" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="white" font-weight="600" opacity="0.85">D.E. Coated Grids</text>
+    <!-- info below -->
+    <text x="300" y="240" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#4a5068">Backwash + recharge</text>
+    <text x="300" y="255" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#4a5068">Finest filtration ~2 microns</text>
+    <text x="300" y="272" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#4a5068">Add D.E. after backwash</text>
+  </g>
+
+  <!-- CARTRIDGE FILTER -->
+  <g>
+    <text x="500" y="28" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="14" font-weight="700" fill="#2D3142">Cartridge Filter</text>
+    <!-- tank body (wider, lower) -->
+    <ellipse cx="500" cy="85" rx="52" ry="18" fill="#5c518a"/>
+    <rect x="448" y="85" width="104" height="105" fill="url(#cartGrad)"/>
+    <ellipse cx="500" cy="190" rx="52" ry="18" fill="#463c7a"/>
+    <!-- cartridge pleats -->
+    <rect x="468" y="95" width="12" height="85" fill="white" opacity="0.35" rx="2"/>
+    <rect x="488" y="95" width="12" height="85" fill="white" opacity="0.35" rx="2"/>
+    <rect x="508" y="95" width="12" height="85" fill="white" opacity="0.35" rx="2"/>
+    <rect x="528" y="95" width="12" height="85" fill="white" opacity="0.35" rx="2"/>
+    <!-- clamp band at top -->
+    <rect x="444" y="79" width="112" height="10" fill="#888" rx="3"/>
+    <rect x="444" y="185" width="112" height="10" fill="#888" rx="3"/>
+    <!-- pipe in/out -->
+    <rect x="476" y="67" width="48" height="14" fill="#666" rx="3"/>
+    <text x="500" y="165" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="white" font-weight="600" opacity="0.85">Pleated Cartridge</text>
+    <!-- info below -->
+    <text x="500" y="240" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#4a5068">Rinse with hose — NO backwash</text>
+    <text x="500" y="255" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#4a5068">Filters to ~10 microns</text>
+    <text x="500" y="272" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#4a5068">Replace cartridge annually</text>
+  </g>
+</svg>
